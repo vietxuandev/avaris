@@ -107,7 +107,7 @@ export function AboutSection() {
         </AnimatedSection>
 
         {/* Features Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
           {features.map((feature, index) => (
             <AnimatedFeatureCard key={index} index={index}>
               {/* Icon */}
@@ -131,12 +131,12 @@ export function AboutSection() {
             <div className="absolute -inset-4 bg-linear-to-r from-cyan-400/20 via-blue-500/20 to-cyan-400/20 rounded-[3rem] blur-3xl" />
 
             {/* Glass card */}
-            <div className="relative glass-dark rounded-[3rem] p-12 md:p-16 overflow-hidden border border-white/10">
+            <div className="relative glass-dark rounded-[3rem] p-6 md:p-16 overflow-hidden border border-white/10">
               {/* Top reflection */}
               <div className="absolute top-0 left-0 right-0 h-1/2 bg-linear-to-b from-white/10 to-transparent rounded-t-[3rem] pointer-events-none" />
 
               {/* Stats grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-8 relative z-10">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 relative z-10">
                 {STATS.map((stat, i) => (
                   <AnimatedStat
                     key={i}

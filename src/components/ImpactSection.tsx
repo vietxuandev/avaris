@@ -131,7 +131,7 @@ export function ImpactSection() {
         </AnimatedSectionHeader>
 
         {/* Stats Grid */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-24">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 mb-24">
           {stats.map((stat, index) => (
             <AnimatedImpactCard
               key={index}
@@ -146,7 +146,7 @@ export function ImpactSection() {
         </div>
 
         {/* Benefits Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {benefits.map((benefit, index) => (
             <AnimatedBenefitCard
               key={index}

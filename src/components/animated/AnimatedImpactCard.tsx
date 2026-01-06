@@ -43,28 +43,32 @@ export function AnimatedImpactCard({
       <div className="absolute -inset-1 bg-linear-to-br from-cyan-400/40 to-blue-500/40 rounded-4xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
       {/* Glass card */}
-      <div className="glass-card rounded-4xl p-8 relative overflow-hidden h-full">
+      <div className="glass-card rounded-4xl p-3 sm:p-5 md:p-8 relative overflow-hidden h-full">
         {/* Top reflection */}
         <div className="absolute top-0 left-0 right-0 h-1/2 bg-linear-to-b from-white/60 to-transparent rounded-t-4xl pointer-events-none" />
 
         {/* Icon */}
         <motion.div
           whileHover={{ scale: 1.2, rotate: 10 }}
-          className="relative mb-6"
+          className="relative mb-2 sm:mb-4 md:mb-6"
         >
-          <div className="w-14 h-14 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto shadow-xl relative overflow-hidden">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 md:w-14 md:h-14 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center mx-auto shadow-xl relative overflow-hidden">
             <div className="absolute inset-0 bg-linear-to-br from-white/30 to-transparent" />
-            <div className="w-7 h-7 text-white relative z-10">{children}</div>
+            <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 text-white relative z-10">
+              {children}
+            </div>
           </div>
         </motion.div>
 
         {/* Content */}
         <div className="text-center relative z-10">
-          <div className="text-5xl mb-3 bg-linear-to-br from-cyan-700 to-blue-700 bg-clip-text text-transparent">
+          <div className="text-3xl sm:text-4xl md:text-5xl mb-1 sm:mb-2 md:mb-3 bg-linear-to-br from-cyan-700 to-blue-700 bg-clip-text text-transparent">
             {number}
           </div>
-          <div className="text-lg mb-2 text-cyan-900">{label}</div>
-          <div className="text-sm text-cyan-700">{description}</div>
+          <div className="text-sm sm:text-base md:text-lg mb-1 sm:mb-1.5 md:mb-2 text-cyan-900">
+            {label}
+          </div>
+          <div className="text-xs sm:text-sm text-cyan-700">{description}</div>
         </div>
       </div>
     </motion.div>
@@ -104,7 +108,7 @@ export function AnimatedBenefitCard({
       <div className="absolute -inset-1 bg-linear-to-br from-cyan-400/30 to-blue-500/30 rounded-4xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
       {/* Glass card */}
-      <div className="glass-card rounded-4xl p-8 relative overflow-hidden h-full">
+      <div className="glass-card rounded-4xl p-3 sm:p-5 md:p-8 relative overflow-hidden h-full">
         {/* Top reflection */}
         <div className="absolute top-0 left-0 right-0 h-1/3 bg-linear-to-b from-white/60 to-transparent rounded-t-4xl pointer-events-none" />
 
@@ -112,19 +116,23 @@ export function AnimatedBenefitCard({
         <ShimmerEffect />
 
         {/* Icon */}
-        <div className="relative mb-6">
+        <div className="relative mb-2 sm:mb-4 md:mb-6">
           <motion.div
-            className="w-16 h-16 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl relative overflow-hidden"
+            className="w-10 h-10 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-linear-to-br from-cyan-500 to-blue-600 rounded-2xl flex items-center justify-center shadow-2xl relative overflow-hidden"
             whileHover={{ scale: 1.1, rotate: 5 }}
           >
             <div className="absolute inset-0 bg-linear-to-br from-white/40 to-transparent" />
-            <div className="w-8 h-8 text-white relative z-10">{children}</div>
+            <div className="w-5 h-5 sm:w-6 sm:h-6 md:w-8 md:h-8 text-white relative z-10">
+              {children}
+            </div>
           </motion.div>
         </div>
 
         {/* Content */}
-        <h3 className="text-2xl mb-4 relative z-10 text-cyan-950">{title}</h3>
-        <p className="leading-relaxed relative z-10 text-cyan-800">
+        <h3 className="text-sm sm:text-lg md:text-2xl mb-1.5 sm:mb-3 md:mb-4 relative z-10 text-cyan-950">
+          {title}
+        </h3>
+        <p className="text-xs sm:text-sm md:text-base leading-relaxed relative z-10 text-cyan-800">
           {description}
         </p>
       </div>

@@ -46,7 +46,7 @@ export function AnimatedFeatureCard({
       <div className="absolute -inset-1 bg-linear-to-br from-cyan-400/30 to-blue-500/30 rounded-4xl blur-xl opacity-0 group-hover:opacity-100 transition-all duration-700" />
 
       {/* Glass card */}
-      <div className="glass-dark rounded-4xl p-8 relative overflow-hidden h-full border border-white/10">
+      <div className="glass-dark rounded-4xl p-3 sm:p-5 md:p-8 relative overflow-hidden h-full border border-white/10">
         {/* Top light reflection */}
         <div className="absolute top-0 left-0 right-0 h-1/3 bg-linear-to-b from-white/5 to-transparent rounded-t-4xl pointer-events-none" />
 
