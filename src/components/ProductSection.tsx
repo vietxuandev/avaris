@@ -19,26 +19,27 @@ const products = [
   {
     id: 1,
     image: product1,
-    title: "AVARIS trong không gian hiện đại",
-    description: "Sự kết hợp hoàn hảo giữa thiết kế và công năng",
-  },
-  {
-    id: 2,
-    image: product2,
     title: "Chai thủy tinh cao cấp",
     description: "Thiết kế sang trọng, bền vững với môi trường",
   },
   {
-    id: 3,
-    image: product3,
-    title: "Đẳng cấp trong từng chi tiết",
-    description: "Trải nghiệm sản phẩm thực tế chất lượng",
+    id: 2,
+    image: product2,
+
+    title: "Không gian hiện đại",
+    description: "Sự kết hợp hoàn hảo giữa thiết kế và công năng",
   },
   {
     id: 4,
     image: product4,
     title: "Phong cách sống bền vững",
     description: "Lựa chọn hoàn hảo cho môi trường xanh",
+  },
+  {
+    id: 3,
+    image: product3,
+    title: "Đẳng cấp trong từng chi tiết",
+    description: "Trải nghiệm sản phẩm thực tế chất lượng",
   },
 ];
 

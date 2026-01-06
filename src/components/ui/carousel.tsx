@@ -206,9 +206,9 @@ const CarouselPrevious = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-12 w-12 rounded-full bg-white/90 hover:bg-white shadow-lg backdrop-blur-sm",
+        "absolute h-12 w-12 rounded-full bg-white/90 hover:bg-white shadow-lg backdrop-blur-sm hidden md:flex",
         orientation === "horizontal"
-          ? "-left-6 top-1/2 -translate-y-1/2"
+          ? "md:left-0 lg:-left-6 top-1/2 -translate-y-1/2"
           : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
@@ -235,9 +235,9 @@ const CarouselNext = React.forwardRef<
       variant={variant}
       size={size}
       className={cn(
-        "absolute h-12 w-12 rounded-full bg-white/90 hover:bg-white shadow-lg backdrop-blur-sm",
+        "absolute h-12 w-12 rounded-full bg-white/90 hover:bg-white shadow-lg backdrop-blur-sm hidden md:flex",
         orientation === "horizontal"
-          ? "-right-6 top-1/2 -translate-y-1/2"
+          ? "md:right-0 lg:-right-6 top-1/2 -translate-y-1/2"
           : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
