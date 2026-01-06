@@ -167,35 +167,35 @@ export function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
-              initial={{ opacity: 0, height: 0 }}
-              animate={{ opacity: 1, height: "auto" }}
-              exit={{ opacity: 0, height: 0 }}
-              transition={{ duration: 0.3 }}
-              className="md:hidden overflow-hidden glass-card rounded-4xl mt-4 mb-4 relative"
+              initial={{ opacity: 0, y: -10 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -10 }}
+              transition={{ duration: 0.2, ease: "easeOut" }}
+              className="md:hidden glass-card rounded-4xl mt-4 mb-4 relative"
             >
               {/* Top highlight */}
               <div className="absolute top-0 left-0 right-0 h-16 bg-linear-to-b from-white/30 to-transparent rounded-t-4xl pointer-events-none" />
 
               <div className="py-4 space-y-2">
                 {navLinks.map((link, index) => (
-                  <motion.a
+                  <a
                     key={index}
                     href={link.href}
                     onClick={(e) => {
                       e.preventDefault();
                       scrollToSection(link.href);
                     }}
-                    initial={{ opacity: 0, x: -20 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: index * 0.1 }}
-                    className="block px-6 py-3 text-gray-700 hover:bg-white/50 rounded-2xl mx-3 transition-all duration-200"
+                    className="block px-6 py-3 text-gray-700 hover:bg-white/50 rounded-2xl mx-3 transition-colors duration-150"
                   >
                     {link.name}
-                  </motion.a>
+                  </a>
                 ))}
                 <div className="px-6 pt-2">
                   <Button
-                    onClick={() => scrollToSection("#contact")}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      scrollToSection("#contact");
+                    }}
                     className="w-full glass-button text-gray-700 rounded-3xl hover:bg-white/60 transition-all duration-300 relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-linear-to-br from-white/30 to-transparent rounded-3xl pointer-events-none" />
