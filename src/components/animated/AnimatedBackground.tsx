@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
-import { ReactNode, useRef } from "react";
+import { ReactNode } from "react";
 
 interface AnimatedBackgroundProps {
   children: ReactNode;
@@ -9,23 +8,12 @@ interface AnimatedBackgroundProps {
 }
 
 /**
- * Client component for animated parallax background
+ * Client component for fixed background - no parallax to prevent flickering
  * Separated from server components for better SEO
  */
 export function AnimatedBackground({
   children,
   className = "",
 }: AnimatedBackgroundProps) {
-  const ref = useRef(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start end", "end start"],
-  });
-  const bgY = useTransform(scrollYProgress, [0, 1], ["0%", "30%"]);
-
-  return (
-    <motion.div ref={ref} className={className} style={{ y: bgY }}>
-      {children}
-    </motion.div>
-  );
+  return <div className={className}>{children}</div>;
 }

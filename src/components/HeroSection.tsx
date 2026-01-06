@@ -9,16 +9,15 @@ export function HeroSection() {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   }, []);
 
-  // Parallax scroll effects
+  // Scroll effects
   const { scrollY } = useScroll();
-  const bgY = useTransform(scrollY, [0, 1000], [0, 300]); // Background moves slower
   const contentY = useTransform(scrollY, [0, 1000], [0, 100]); // Content moves slightly
   const opacity = useTransform(scrollY, [0, 400], [1, 0]); // Fade out on scroll
 
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden">
       {/* Background Video */}
-      <motion.div className="absolute inset-0" style={{ y: bgY }}>
+      <div className="absolute inset-0">
         <div className="absolute inset-0">
           <video
             autoPlay
@@ -32,7 +31,7 @@ export function HeroSection() {
           {/* Overlay gradient for better text readability */}
           <div className="absolute inset-0 bg-linear-to-br from-cyan-900/30 via-blue-900/20 to-blue-900/40" />
         </div>
-      </motion.div>
+      </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">
