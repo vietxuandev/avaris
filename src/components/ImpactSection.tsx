@@ -6,7 +6,6 @@ import {
   AnimatedBenefitCard,
   AnimatedSectionHeader,
   AnimatedParallaxBackground,
-  AnimatedBlobs,
 } from "./animated";
 
 const stats = [
@@ -95,28 +94,6 @@ export function ImpactSection() {
           />
         </div>
       </AnimatedParallaxBackground>
-
-      {/* Floating liquid glass blobs - CSS animations */}
-      <AnimatedBlobs />
-
-      {/* Water ripple circles - CSS only, no JS */}
-      <div className="absolute inset-0 overflow-hidden opacity-30 pointer-events-none">
-        {[...Array(4)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full border border-cyan-400/30"
-            style={{
-              width: 300 + i * 150,
-              height: 300 + i * 150,
-              left: "50%",
-              top: "50%",
-              transform: "translate(-50%, -50%)",
-              animation: `water-ripple ${6 + i * 2}s ease-in-out infinite`,
-              animationDelay: `${i * 1.5}s`,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

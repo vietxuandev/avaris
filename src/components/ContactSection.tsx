@@ -4,7 +4,6 @@ import Image from "next/image";
 import {
   AnimatedContactCard,
   AnimatedParallaxBackground,
-  AnimatedBlobs,
   AnimatedSection,
 } from "./animated";
 
@@ -32,24 +31,6 @@ export function ContactSection() {
         </div>
         <div className="absolute inset-0 bg-linear-to-b from-cyan-950/60 via-blue-950/80 to-blue-900/60" />
       </AnimatedParallaxBackground>
-
-      {/* Floating liquid glass blobs - CSS animations */}
-      <AnimatedBlobs />
-
-      {/* Gentle water waves - CSS only */}
-      <div className="absolute inset-0 overflow-hidden opacity-20 pointer-events-none">
-        {[...Array(5)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-full h-1 bg-linear-to-r from-transparent via-cyan-300/40 to-transparent"
-            style={{
-              top: `${20 + i * 15}%`,
-              animation: `water-wave ${10 + i * 2}s linear infinite`,
-              animationDelay: `${i * 0.5}s`,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 max-w-7xl">
         {/* Header */}

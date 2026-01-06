@@ -5,8 +5,6 @@
  */
 
 export { AnimatedBackground } from "./AnimatedBackground";
-export { AnimatedBlobs } from "./AnimatedBlobs";
-export { AnimatedCaustics } from "./AnimatedCaustics";
 export { AnimatedFeatureCard } from "./AnimatedFeatureCard";
 export {
   AnimatedHeroBackground,

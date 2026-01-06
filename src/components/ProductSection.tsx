@@ -49,26 +49,6 @@ export function ProductSection() {
       id="products"
       className="py-32 relative overflow-hidden bg-linear-to-br from-slate-50 via-cyan-50/30 to-blue-50/40"
     >
-      {/* Decorative background elements */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div
-          animate={{
-            scale: [1, 1.2, 1],
-            opacity: [0.3, 0.5, 0.3],
-          }}
-          transition={{ duration: 8, repeat: Infinity }}
-          className="absolute top-20 right-20 w-96 h-96 bg-cyan-200/30 rounded-full blur-3xl"
-        />
-        <motion.div
-          animate={{
-            scale: [1, 1.3, 1],
-            opacity: [0.2, 0.4, 0.2],
-          }}
-          transition={{ duration: 10, repeat: Infinity }}
-          className="absolute bottom-20 left-20 w-[500px] h-[500px] bg-blue-200/20 rounded-full blur-3xl"
-        />
-      </div>
-
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <AnimatedSection className="text-center mb-20">

@@ -13,7 +13,6 @@ import {
   AnimatedProcessTimeline,
   AnimatedCertBadge,
   AnimatedParallaxBackground,
-  AnimatedBlobs,
   AnimatedSection,
 } from "./animated";
 
@@ -74,24 +73,6 @@ export function ProcessSection() {
         </div>
         <div className="absolute inset-0 bg-linear-to-b from-blue-950/70 via-cyan-950/80 to-blue-900/70" />
       </AnimatedParallaxBackground>
-
-      {/* Floating liquid glass blobs - CSS animations */}
-      <AnimatedBlobs />
-
-      {/* Flowing water effect - CSS animated lines */}
-      <div className="absolute inset-0 overflow-hidden opacity-15 pointer-events-none">
-        {[...Array(6)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-px h-full bg-linear-to-b from-transparent via-cyan-300/40 to-transparent"
-            style={{
-              left: `${15 + i * 14}%`,
-              animation: `water-flow ${8 + i * 2}s linear infinite`,
-              animationDelay: `${i * 0.5}s`,
-            }}
-          />
-        ))}
-      </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}

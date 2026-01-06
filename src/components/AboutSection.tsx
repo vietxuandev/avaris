@@ -3,8 +3,6 @@ import { Award, Droplets, Leaf, Shield, Sparkles, Users } from "lucide-react";
 import Image from "next/image";
 import {
   AnimatedBackground,
-  AnimatedBlobs,
-  AnimatedCaustics,
   AnimatedFeatureCard,
   AnimatedIcon,
   AnimatedSection,
@@ -76,12 +74,6 @@ export function AboutSection() {
         </div>
         <div className="absolute inset-0 bg-linear-to-b from-cyan-950/60 via-blue-950/80 to-blue-900/60" />
       </AnimatedBackground>
-
-      {/* Floating liquid glass blobs */}
-      <AnimatedBlobs />
-
-      {/* Animated water caustics effect */}
-      <AnimatedCaustics className="absolute inset-0 opacity-20" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}

@@ -1,7 +1,6 @@
 import logo from "@/assets/logo.png";
 import { Globe, Mail, Phone } from "lucide-react";
 import Image from "next/image";
-import { AnimatedBlobs } from "./animated";
 
 /**
  * Footer - Server Component (SEO-friendly)
@@ -12,11 +11,6 @@ export function Footer() {
 
   return (
     <footer className="relative overflow-hidden bg-linear-to-br from-cyan-950 via-blue-950 to-blue-900">
-      {/* Floating liquid glass blobs */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30">
-        <AnimatedBlobs />
-      </div>
-
       <div className="relative z-10 py-16">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-3 gap-12 mb-12">
