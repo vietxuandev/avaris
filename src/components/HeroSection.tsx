@@ -2,26 +2,9 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { Button } from "./ui/button";
-import heroBg from "@/assets/hero.png";
-import Image from "next/image";
-import { useCallback, useMemo, useState, useEffect } from "react";
-
-// Move array outside component to prevent recreation
-const LIGHT_RAYS = Array.from({ length: 5 }, (_, i) => i);
+import { useCallback } from "react";
 
 export function HeroSection() {
-  const [isMobile, setIsMobile] = useState(false);
-
-  // Detect mobile device
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
   const scrollToContact = useCallback(() => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   }, []);
@@ -32,202 +15,24 @@ export function HeroSection() {
   const contentY = useTransform(scrollY, [0, 1000], [0, 100]); // Content moves slightly
   const opacity = useTransform(scrollY, [0, 400], [1, 0]); // Fade out on scroll
 
-  // Memoize animation props to prevent object recreation
-  const opacityAnimation = useMemo(() => ({ opacity: [0.2, 0.4, 0.2] }), []);
-  const opacityTransition = useMemo(
-    () => ({ duration: 5, repeat: Infinity, ease: "easeInOut" as const }),
-    []
-  );
-
   return (
     <section id="hero" className="relative h-screen w-full overflow-hidden">
-      {/* SVG Filters for Water Effects */}
-      <svg className="absolute w-0 h-0">
-        <defs>
-          {/* Realistic Water Distortion Filter */}
-          <filter id="waterFilter" x="-50%" y="-50%" width="200%" height="200%">
-            {/* Turbulence for water ripples */}
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.015 0.02"
-              numOctaves="3"
-              seed="2"
-              result="turbulence"
-            >
-              <animate
-                attributeName="baseFrequency"
-                values="0.015 0.02;0.018 0.025;0.015 0.02"
-                dur="8s"
-                repeatCount="indefinite"
-              />
-            </feTurbulence>
-
-            {/* Displacement for water distortion */}
-            <feDisplacementMap
-              in="SourceGraphic"
-              in2="turbulence"
-              scale="15"
-              xChannelSelector="R"
-              yChannelSelector="G"
-              result="displacement"
-            />
-
-            {/* Blur for depth */}
-            <feGaussianBlur
-              in="displacement"
-              stdDeviation="0.5"
-              result="blur"
-            />
-
-            {/* Brighten for water light refraction */}
-            <feColorMatrix
-              in="blur"
-              type="matrix"
-              values="1.1 0 0 0 0
-                      0 1.15 0 0 0
-                      0 0 1.2 0 0
-                      0 0 0 1 0"
-              result="brighten"
-            />
-
-            {/* Merge with original */}
-            <feBlend in="brighten" in2="SourceGraphic" mode="normal" />
-          </filter>
-
-          {/* Caustics Pattern Filter */}
-          <filter id="caustics" x="-50%" y="-50%" width="200%" height="200%">
-            <feTurbulence
-              type="fractalNoise"
-              baseFrequency="0.02 0.03"
-              numOctaves="4"
-              seed="10"
-              result="causticTurbulence"
-            >
-              <animate
-                attributeName="baseFrequency"
-                values="0.02 0.03;0.025 0.035;0.02 0.03"
-                dur="12s"
-                repeatCount="indefinite"
-              />
-            </feTurbulence>
-
-            <feColorMatrix
-              in="causticTurbulence"
-              type="matrix"
-              values="0 0 0 0 0
-                      0 0 0 0 0.5
-                      0 0 0 0 1
-                      0 0 0 0.3 0"
-              result="causticColor"
-            />
-
-            <feGaussianBlur
-              in="causticColor"
-              stdDeviation="2"
-              result="causticBlur"
-            />
-          </filter>
-        </defs>
-      </svg>
-
-      {/* Background Image with Water Filter */}
+      {/* Background Video */}
       <motion.div className="absolute inset-0" style={{ y: bgY }}>
-        <div
-          className="absolute inset-0"
-          style={{ filter: isMobile ? "none" : "url(#waterFilter)" }}
-        >
-          <Image
-            src={heroBg}
-            alt="AVARIS bottle floating on water"
+        <div className="absolute inset-0">
+          <video
+            autoPlay
+            loop
+            muted
+            playsInline
             className="w-full h-full object-cover"
-            quality={75}
-            priority={true}
-            placeholder="blur"
-            sizes="100vw"
-          />
+          >
+            <source src="/assets/tvc.mp4" type="video/mp4" />
+          </video>
           {/* Overlay gradient for better text readability */}
           <div className="absolute inset-0 bg-linear-to-br from-cyan-900/30 via-blue-900/20 to-blue-900/40" />
         </div>
-
-        {/* Animated Caustics Overlay - Disabled on mobile for performance */}
-        {!isMobile && (
-          <div
-            className="absolute inset-0 opacity-40 mix-blend-screen"
-            style={{ filter: "url(#caustics)" }}
-          >
-            <div className="absolute inset-0 bg-linear-to-br from-cyan-300/30 via-blue-400/20 to-transparent" />
-          </div>
-        )}
-
-        {/* Animated light rays through water */}
-        <motion.div
-          className="absolute inset-0 overflow-hidden"
-          initial={{ opacity: 0 }}
-          animate={opacityAnimation}
-          transition={opacityTransition}
-        >
-          {LIGHT_RAYS.map((i) => (
-            <motion.div
-              key={i}
-              className="absolute w-1 h-full bg-linear-to-b from-transparent via-cyan-200/20 to-transparent"
-              style={{
-                left: `${15 + i * 20}%`,
-                transform: `rotate(${10 + i * 3}deg)`,
-              }}
-              animate={{
-                opacity: [0.1, 0.3, 0.1],
-                x: [-20, 20, -20],
-              }}
-              transition={{
-                duration: 8 + i * 2,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: i * 0.5,
-              }}
-            />
-          ))}
-        </motion.div>
       </motion.div>
-
-      {/* Multiple Animated Liquid Blobs overlaying the image */}
-      <div className="absolute inset-0 overflow-hidden">
-        <motion.div
-          animate={{
-            x: [0, 150, 0],
-            y: [0, -100, 0],
-            scale: [1, 1.4, 1],
-          }}
-          transition={{ duration: 20, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-20 right-1/4 w-[600px] h-[600px] bg-linear-to-br from-cyan-400/20 to-blue-500/20 rounded-full blur-[100px]"
-        />
-        <motion.div
-          animate={{
-            x: [0, -120, 0],
-            y: [0, 100, 0],
-            scale: [1, 1.5, 1],
-          }}
-          transition={{ duration: 25, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-0 left-1/4 w-[700px] h-[700px] bg-linear-to-br from-blue-500/20 to-purple-500/15 rounded-full blur-[120px]"
-        />
-        <motion.div
-          animate={{
-            x: [0, 80, 0],
-            y: [0, -80, 0],
-            scale: [1, 1.3, 1],
-          }}
-          transition={{ duration: 15, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute top-1/3 left-1/3 w-[500px] h-[500px] bg-linear-to-br from-cyan-300/15 to-sky-400/15 rounded-full blur-[100px]"
-        />
-        <motion.div
-          animate={{
-            x: [0, -60, 0],
-            y: [0, 60, 0],
-            scale: [1, 1.2, 1],
-          }}
-          transition={{ duration: 18, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute bottom-1/4 right-1/3 w-96 h-96 bg-linear-to-br from-blue-400/15 to-cyan-500/15 rounded-full blur-[80px]"
-        />
-      </div>
 
       {/* Content */}
       <div className="relative z-10 h-full flex items-center justify-center">
