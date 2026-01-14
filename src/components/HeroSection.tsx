@@ -1,10 +1,12 @@
 "use client";
 
 import { motion, useScroll, useTransform } from "motion/react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
 import { useCallback } from "react";
 
 export function HeroSection() {
+  const { t } = useTranslation();
   const scrollToContact = useCallback(() => {
     document.getElementById("contact")?.scrollIntoView({ behavior: "smooth" });
   }, []);
@@ -52,7 +54,7 @@ export function HeroSection() {
                 className="mb-8 flex flex-col items-center"
               >
                 <h1 className="text-6xl md:text-7xl lg:text-8xl mb-6 text-white drop-shadow-2xl">
-                  AVARIS
+                  {t("hero.title")}
                 </h1>
                 <div className="h-1.5 w-32 bg-white/70 rounded-full backdrop-blur-sm shadow-lg" />
               </motion.div>
@@ -63,8 +65,7 @@ export function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.6 }}
                 className="text-xl mb-12 text-white/95 leading-relaxed drop-shadow-md"
               >
-                Chai thủy tinh cao cấp, tái sử dụng - Kết hợp hoàn hảo giữa đẳng
-                cấp và trách nhiệm với môi trường
+                {t("hero.subtitle")}
               </motion.p>
 
               <motion.div
@@ -77,7 +78,7 @@ export function HeroSection() {
                   onClick={scrollToContact}
                   className="glass-button text-white px-12 py-8 text-lg rounded-4xl hover:bg-white/30 transition-all duration-500 hover:scale-105 hover:shadow-2xl"
                 >
-                  Begin your sustainable future now
+                  {t("hero.cta")}
                 </Button>
               </motion.div>
             </motion.div>

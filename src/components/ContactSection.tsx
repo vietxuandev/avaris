@@ -1,6 +1,9 @@
+"use client";
+
 import oceanBlueSurface from "@/assets/ocean-blue-water-surface.jpg";
 import { Globe, Linkedin, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import {
   AnimatedContactCard,
   AnimatedParallaxBackground,
@@ -8,10 +11,11 @@ import {
 } from "./animated";
 
 /**
- * ContactSection - Server Component (SEO-optimized)
+ * ContactSection - Client Component (using translations)
  * All animations are handled by client components
  */
 export function ContactSection() {
+  const { t } = useTranslation();
   return (
     <section
       id="contact"
@@ -38,20 +42,18 @@ export function ContactSection() {
           <div className="inline-flex items-center gap-3 glass-button px-8 py-4 rounded-full mb-10 text-cyan-100">
             <Mail className="w-5 h-5" />
             <span className="text-sm tracking-[0.3em] uppercase">
-              Contact Us
+              {t("contact.badge")}
             </span>
           </div>
 
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-8 text-white">
-            Liên hệ <br />
+            {t("contact.title")} <br />
             <span className="bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              với chúng tôi
+              {t("contact.titleHighlight")}
             </span>
           </h2>
 
-          <p className="text-xl text-cyan-100/90">
-            Hãy để AVARIS đồng hành cùng thương hiệu của bạn
-          </p>
+          <p className="text-xl text-cyan-100/90">{t("contact.description")}</p>
         </AnimatedSection>
 
         {/* Contact Info Cards - Grid Layout */}
@@ -59,9 +61,9 @@ export function ContactSection() {
           {/* Website Card */}
           <AnimatedContactCard
             index={0}
-            label="Website"
-            value="avariswater.com"
-            href="https://avariswater.com"
+            label={t("contact.info.website.label")}
+            value={t("contact.info.website.value")}
+            href={`https://${t("contact.info.website.value")}`}
           >
             <Globe className="w-full h-full" />
           </AnimatedContactCard>
@@ -69,9 +71,9 @@ export function ContactSection() {
           {/* Email Card */}
           <AnimatedContactCard
             index={1}
-            label="Email"
-            value="info@avariswater.com"
-            href="mailto:info@avariswater.com"
+            label={t("contact.info.email.label")}
+            value={t("contact.info.email.value")}
+            href={`mailto:${t("contact.info.email.value")}`}
           >
             <Mail className="w-full h-full" />
           </AnimatedContactCard>
@@ -79,9 +81,9 @@ export function ContactSection() {
           {/* Phone Card */}
           <AnimatedContactCard
             index={2}
-            label="Hotline"
-            value="0868.869.910"
-            href="tel:0868869910"
+            label={t("contact.info.phone.label")}
+            value={t("contact.info.phone.value")}
+            href={`tel:${t("contact.info.phone.value").replace(/\./g, "")}`}
           >
             <Phone className="w-full h-full" />
           </AnimatedContactCard>
@@ -89,9 +91,11 @@ export function ContactSection() {
           {/* LinkedIn Card */}
           <AnimatedContactCard
             index={3}
-            label="LinkedIn"
-            value="avariswater"
-            href="https://www.linkedin.com/company/avariswater"
+            label={t("contact.info.linkedin.label")}
+            value={t("contact.info.linkedin.value")}
+            href={`https://www.linkedin.com/company/${t(
+              "contact.info.linkedin.value"
+            )}`}
           >
             <Linkedin className="w-full h-full" />
           </AnimatedContactCard>

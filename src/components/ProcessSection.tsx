@@ -1,3 +1,5 @@
+"use client";
+
 import underwaterLightRays from "@/assets/underwater-light-rays.jpg";
 import {
   CheckCircle2,
@@ -8,6 +10,7 @@ import {
   Truck,
 } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import {
   AnimatedProcessStep,
   AnimatedProcessTimeline,
@@ -16,44 +19,45 @@ import {
   AnimatedSection,
 } from "./animated";
 
-const processSteps = [
-  {
-    icon: Droplet,
-    title: "Nguồn nước",
-    description: "Lựa chọn nguồn nước sạch, đạt tiêu chuẩn",
-  },
-  {
-    icon: Filter,
-    title: "Lọc & Xử lý",
-    description: "Quy trình lọc hiện đại, ISO 9001 & HACCP",
-  },
-  {
-    icon: Package,
-    title: "Đóng chai",
-    description: "Đóng chai tự động trong môi trường vô trùng",
-  },
-  {
-    icon: CheckCircle2,
-    title: "Kiểm tra",
-    description: "Kiểm soát chất lượng nghiêm ngặt",
-  },
-  {
-    icon: Truck,
-    title: "Vận chuyển",
-    description: "Giao hàng đến tận nơi, đúng hẹn",
-  },
-  {
-    icon: RotateCcw,
-    title: "Thu hồi",
-    description: "Thu hồi chai rỗng để tái sử dụng",
-  },
-];
-
 /**
- * ProcessSection - Server Component (SEO-optimized)
+ * ProcessSection - Client Component (using translations)
  * All animations are handled by client components
  */
 export function ProcessSection() {
+  const { t } = useTranslation();
+
+  const processSteps = [
+    {
+      icon: Droplet,
+      title: t("process.steps.source.title"),
+      description: t("process.steps.source.description"),
+    },
+    {
+      icon: Filter,
+      title: t("process.steps.filter.title"),
+      description: t("process.steps.filter.description"),
+    },
+    {
+      icon: Package,
+      title: t("process.steps.bottle.title"),
+      description: t("process.steps.bottle.description"),
+    },
+    {
+      icon: CheckCircle2,
+      title: t("process.steps.check.title"),
+      description: t("process.steps.check.description"),
+    },
+    {
+      icon: Truck,
+      title: t("process.steps.delivery.title"),
+      description: t("process.steps.delivery.description"),
+    },
+    {
+      icon: RotateCcw,
+      title: t("process.steps.recycle.title"),
+      description: t("process.steps.recycle.description"),
+    },
+  ];
   return (
     <section
       id="process"
@@ -80,19 +84,19 @@ export function ProcessSection() {
           <div className="inline-flex items-center gap-3 glass-button px-8 py-4 rounded-full mb-10 text-cyan-100">
             <Droplet className="w-5 h-5" />
             <span className="text-sm tracking-[0.3em] uppercase">
-              Our Process
+              {t("process.badge")}
             </span>
           </div>
 
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-8 text-white">
-            Quy trình sản xuất <br />
+            {t("process.title")} <br />
             <span className="bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              & vận hành bền vững
+              {t("process.titleHighlight")}
             </span>
           </h2>
 
           <p className="text-xl text-cyan-100/90 max-w-3xl mx-auto">
-            Từ nguồn nước đến tay khách hàng - Chu trình bền vững
+            {t("process.description")}
           </p>
         </AnimatedSection>
 
@@ -134,17 +138,23 @@ export function ProcessSection() {
                   </div>
 
                   <h4 className="text-3xl md:text-4xl mb-6 text-white">
-                    Chứng nhận chất lượng quốc tế
+                    {t("process.certifications.title")}
                   </h4>
 
                   <p className="text-lg mb-10 max-w-2xl mx-auto text-cyan-100/80">
-                    Được công nhận bởi các tổ chức chứng nhận hàng đầu thế giới
+                    {t("process.certifications.description")}
                   </p>
 
                   <div className="flex flex-wrap justify-center gap-6 items-center">
                     {[
-                      { name: "ISO 9001", desc: "Quản lý chất lượng" },
-                      { name: "HACCP", desc: "An toàn thực phẩm" },
+                      {
+                        name: t("process.certifications.iso.name"),
+                        desc: t("process.certifications.iso.description"),
+                      },
+                      {
+                        name: t("process.certifications.haccp.name"),
+                        desc: t("process.certifications.haccp.description"),
+                      },
                     ].map((cert, i) => (
                       <AnimatedCertBadge
                         key={i}

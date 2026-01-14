@@ -1,12 +1,16 @@
+"use client";
+
 import logo from "@/assets/logo.png";
 import { Globe, Mail, Phone } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 
 /**
- * Footer - Server Component (SEO-friendly)
+ * Footer - Client Component (using translations)
  * Animations handled by client components
  */
 export function Footer() {
+  const { t } = useTranslation();
   const currentYear = new Date().getFullYear();
 
   return (
@@ -26,22 +30,21 @@ export function Footer() {
                 />
               </div>
               <p className="text-cyan-100/80 leading-relaxed">
-                Nước uống cao cấp trong chai thủy tinh tái sử dụng - Định hình
-                đẳng cấp thương hiệu của bạn
+                {t("footer.brand.description")}
               </p>
             </div>
 
             {/* Quick Links */}
             <div>
               <h3 className="text-xl mb-6 text-white tracking-wide">
-                Liên kết nhanh
+                {t("footer.quickLinks.title")}
               </h3>
               <ul className="space-y-3">
                 {[
-                  { label: "Giới thiệu", href: "#about" },
-                  { label: "Lợi ích chai thủy tinh", href: "#impact" },
-                  { label: "Quy trình sản xuất", href: "#process" },
-                  { label: "Liên hệ", href: "#contact" },
+                  { label: t("footer.quickLinks.about"), href: "#about" },
+                  { label: t("footer.quickLinks.impact"), href: "#impact" },
+                  { label: t("footer.quickLinks.process"), href: "#process" },
+                  { label: t("footer.quickLinks.contact"), href: "#contact" },
                 ].map((link) => (
                   <li key={link.href}>
                     <a
@@ -58,7 +61,7 @@ export function Footer() {
             {/* Contact Info */}
             <div>
               <h3 className="text-xl mb-6 text-white tracking-wide">
-                Thông tin liên hệ
+                {t("footer.contactInfo.title")}
               </h3>
               <ul className="space-y-4">
                 <li className="flex items-center gap-3 group">
@@ -103,8 +106,8 @@ export function Footer() {
 
           {/* Bottom */}
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-cyan-100/60 text-sm">
-            <p>© {currentYear} AVARIS. All rights reserved.</p>
-            <p>Designed with care for the environment 🌊</p>
+            <p>{t("footer.copyright", { year: currentYear })}</p>
+            <p>{t("footer.tagline")}</p>
           </div>
         </div>
       </div>

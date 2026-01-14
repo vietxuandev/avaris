@@ -13,37 +13,38 @@ import {
 } from "@/components/ui/carousel";
 import { motion } from "motion/react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import { AnimatedSection } from "./animated/AnimatedSection";
 
-const products = [
-  {
-    id: 1,
-    image: product1,
-    title: "Chai thủy tinh cao cấp",
-    description: "Thiết kế sang trọng, bền vững với môi trường",
-  },
-  {
-    id: 2,
-    image: product2,
-
-    title: "Không gian hiện đại",
-    description: "Sự kết hợp hoàn hảo giữa thiết kế và công năng",
-  },
-  {
-    id: 4,
-    image: product4,
-    title: "Phong cách sống bền vững",
-    description: "Lựa chọn hoàn hảo cho môi trường xanh",
-  },
-  {
-    id: 3,
-    image: product3,
-    title: "Đẳng cấp trong từng chi tiết",
-    description: "Trải nghiệm sản phẩm thực tế chất lượng",
-  },
-];
-
 export function ProductSection() {
+  const { t } = useTranslation();
+
+  const products = [
+    {
+      id: 1,
+      image: product1,
+      title: t("product.items.premium.title"),
+      description: t("product.items.premium.description"),
+    },
+    {
+      id: 2,
+      image: product2,
+      title: t("product.items.space.title"),
+      description: t("product.items.space.description"),
+    },
+    {
+      id: 4,
+      image: product4,
+      title: t("product.items.lifestyle.title"),
+      description: t("product.items.lifestyle.description"),
+    },
+    {
+      id: 3,
+      image: product3,
+      title: t("product.items.detail.title"),
+      description: t("product.items.detail.description"),
+    },
+  ];
   return (
     <section
       id="products"
@@ -60,7 +61,7 @@ export function ProductSection() {
             className="inline-block mb-4"
           >
             <span className="text-sm font-semibold tracking-wider text-cyan-600 uppercase bg-cyan-50 px-4 py-2 rounded-full">
-              Sản phẩm thực tế
+              {t("product.badge")}
             </span>
           </motion.div>
 
@@ -71,9 +72,9 @@ export function ProductSection() {
             transition={{ duration: 0.6, delay: 0.1 }}
             className="text-4xl md:text-5xl lg:text-6xl mb-6 text-slate-900 tracking-tight"
           >
-            Khám phá{" "}
+            {t("product.title")}{" "}
             <span className="bg-linear-to-r from-cyan-600 via-blue-600 to-cyan-700 bg-clip-text text-transparent">
-              AVARIS
+              {t("product.titleHighlight")}
             </span>
           </motion.h2>
 
@@ -84,8 +85,7 @@ export function ProductSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-lg md:text-xl text-slate-600 max-w-3xl mx-auto leading-relaxed"
           >
-            Trải nghiệm sản phẩm chai thủy tinh cao cấp của chúng tôi trong
-            không gian sống thực tế
+            {t("product.description")}
           </motion.p>
         </AnimatedSection>
 

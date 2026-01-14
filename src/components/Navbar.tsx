@@ -2,20 +2,24 @@
 
 import { Menu, X } from "lucide-react";
 import { AnimatePresence, motion } from "motion/react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { Button } from "./ui/button";
-
-const navLinks = [
-  { name: "Trang chủ", href: "#hero" },
-  { name: "Giới thiệu", href: "#about" },
-  { name: "Lợi ích", href: "#impact" },
-  { name: "Quy trình", href: "#process" },
-  { name: "Liên hệ", href: "#contact" },
-];
+import { LanguageSwitcher } from "./LanguageSwitcher";
 
 export function Navbar() {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
+
+  const navLinks = [
+    { name: t("nav.home"), href: "#hero" },
+    { name: t("nav.about"), href: "#about" },
+    { name: t("nav.impact"), href: "#impact" },
+    { name: t("nav.process"), href: "#process" },
+    { name: t("nav.contact"), href: "#contact" },
+  ];
 
   useEffect(() => {
     let ticking = false;
@@ -33,6 +37,27 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  // Click outside to close mobile menu
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        isOpen &&
+        mobileMenuRef.current &&
+        !mobileMenuRef.current.contains(event.target as Node)
+      ) {
+        setIsOpen(false);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   const scrollToSection = useCallback((href: string) => {
     const element = document.querySelector(href);
@@ -90,7 +115,7 @@ export function Navbar() {
           </motion.a>
 
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-6">
             {navLinks.map((link, index) => (
               <motion.a
                 key={index}
@@ -116,6 +141,9 @@ export function Navbar() {
                 />
               </motion.a>
             ))}
+
+            {/* Language Switcher */}
+            <LanguageSwitcher isScrolled={isScrolled} />
           </div>
 
           {/* CTA Button - Desktop */}
@@ -138,7 +166,7 @@ export function Navbar() {
                     : ""
                 }`}
               >
-                Liên hệ ngay
+                {t("nav.contact")}
               </span>
 
               {!isScrolled && (
@@ -167,6 +195,7 @@ export function Navbar() {
         <AnimatePresence>
           {isOpen && (
             <motion.div
+              ref={mobileMenuRef}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
@@ -190,6 +219,10 @@ export function Navbar() {
                     {link.name}
                   </a>
                 ))}
+                {/* Mobile Language Switcher */}
+                <div className="px-6 justify-center flex">
+                  <LanguageSwitcher isScrolled={isScrolled} />
+                </div>
                 <div className="px-6 pt-2">
                   <Button
                     onClick={(e) => {
@@ -199,7 +232,7 @@ export function Navbar() {
                     className="w-full glass-button text-gray-700 rounded-3xl hover:bg-white/60 transition-all duration-300 relative overflow-hidden"
                   >
                     <div className="absolute inset-0 bg-linear-to-br from-white/30 to-transparent rounded-3xl pointer-events-none" />
-                    <span className="relative z-10">Liên hệ ngay</span>
+                    <span className="relative z-10">{t("nav.contact")}</span>
                   </Button>
                 </div>
               </div>

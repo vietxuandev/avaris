@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "impact": "Impact",
+    "process": "Process",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title": "AVARIS",
+    "subtitle": "Premium reusable glass bottles - Perfect combination of luxury and environmental responsibility",
+    "cta": "Begin your sustainable future now"
+  },
+  "about": {
+    "badge": "About AVARIS",
+    "title": "Premium drinking water",
+    "titleHighlight": "solution & sustainable",
+    "description": "AVARIS provides premium glass bottled water services, perfectly combining superior quality and environmental responsibility",
+    "features": {
+      "environment": {
+        "title": "Environmental Responsibility",
+        "description": "Committed to 100% reusable glass bottles, reducing ocean plastic waste"
+      },
+      "quality": {
+        "title": "Premium Quality",
+        "description": "ISO 9001 & HACCP certified, ensuring absolutely pure drinking water"
+      },
+      "health": {
+        "title": "Health Safety",
+        "description": "0% BPA and toxic chemicals, absolutely safe for consumers"
+      },
+      "ocean": {
+        "title": "Ocean Protection",
+        "description": "Contributing to reducing plastic pollution, protecting marine ecosystems"
+      },
+      "custom": {
+        "title": "Brand Customization",
+        "description": "Custom bottle design, print your brand's logo and message"
+      },
+      "partner": {
+        "title": "Trusted Partner",
+        "description": "Accompanying businesses in building a sustainable image"
+      }
+    },
+    "stats": {
+      "experience": "Years of experience",
+      "partners": "Trusted partners",
+      "quality": "Quality commitment",
+      "support": "Dedicated support"
+    }
+  },
+  "impact": {
+    "badge": "Glass Bottle Impact",
+    "title": "Why choose",
+    "titleHighlight": "glass bottles?",
+    "description": "Reusable glass bottles are not only a premium choice but also a responsibility to the environment and community health",
+    "stats": {
+      "reusable": {
+        "number": "100%",
+        "label": "Reusable",
+        "description": "Infinitely reusable glass bottles"
+      },
+      "safe": {
+        "number": "0%",
+        "label": "BPA & toxins",
+        "description": "Absolutely safe"
+      },
+      "quality": {
+        "number": "∞",
+        "label": "Taste preserved",
+        "description": "Perfect quality"
+      },
+      "friendly": {
+        "number": "100%",
+        "label": "Eco-friendly",
+        "description": "Environmental protection"
+      }
+    },
+    "benefits": {
+      "sustainable": {
+        "title": "Sustainable reuse",
+        "description": "Glass bottles can be collected and reused countless times, reducing plastic waste and protecting marine ecosystems"
+      },
+      "premium": {
+        "title": "Premium quality",
+        "description": "Glass is non-porous, chemical-free, preserving the purity and natural taste of water"
+      },
+      "safety": {
+        "title": "Absolute safety",
+        "description": "Contains no BPA, phthalates or toxic substances from plastic, ensuring consumer health"
+      },
+      "ocean": {
+        "title": "Ocean protection",
+        "description": "Reduces plastic waste in the ocean, helping protect ecosystems and creating a green sustainable future"
+      },
+      "temperature": {
+        "title": "Good heat retention",
+        "description": "Glass maintains water temperature longer, providing the best drinking experience"
+      },
+      "responsibility": {
+        "title": "Social responsibility",
+        "description": "Demonstrates the company's commitment to the environment and community health"
+      }
+    }
+  },
+  "process": {
+    "badge": "Our Process",
+    "title": "Production process",
+    "titleHighlight": "& sustainable operation",
+    "description": "From water source to customers - Sustainable cycle",
+    "steps": {
+      "source": {
+        "title": "Water source",
+        "description": "Selecting clean water sources, meeting standards"
+      },
+      "filter": {
+        "title": "Filtering & Treatment",
+        "description": "Modern filtration process, ISO 9001 & HACCP"
+      },
+      "bottle": {
+        "title": "Bottling",
+        "description": "Automatic bottling in sterile environment"
+      },
+      "check": {
+        "title": "Inspection",
+        "description": "Strict quality control"
+      },
+      "delivery": {
+        "title": "Delivery",
+        "description": "Delivered to your location, on time"
+      },
+      "recycle": {
+        "title": "Collection",
+        "description": "Collecting empty bottles for reuse"
+      }
+    },
+    "certifications": {
+      "title": "International quality certification",
+      "description": "Recognized by the world's leading certification organizations",
+      "iso": {
+        "name": "ISO 9001",
+        "description": "Quality management"
+      },
+      "haccp": {
+        "name": "HACCP",
+        "description": "Food safety"
+      }
+    }
+  },
+  "product": {
+    "badge": "Real Products",
+    "title": "Discover",
+    "titleHighlight": "AVARIS",
+    "description": "Experience our premium glass bottle products in real living spaces",
+    "items": {
+      "premium": {
+        "title": "Premium glass bottles",
+        "description": "Elegant design, environmentally sustainable"
+      },
+      "space": {
+        "title": "Modern spaces",
+        "description": "Perfect combination of design and function"
+      },
+      "lifestyle": {
+        "title": "Sustainable lifestyle",
+        "description": "Perfect choice for a green environment"
+      },
+      "detail": {
+        "title": "Class in every detail",
+        "description": "Real quality product experience"
+      }
+    }
+  },
+  "contact": {
+    "badge": "Contact Us",
+    "title": "Get in touch",
+    "titleHighlight": "with us",
+    "description": "Let AVARIS accompany your brand",
+    "info": {
+      "website": {
+        "label": "Website",
+        "value": "avariswater.com"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@avariswater.com"
+      },
+      "phone": {
+        "label": "Hotline",
+        "value": "0868.869.910"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "avariswater"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "description": "Premium drinking water in reusable glass bottles - Defining your brand's class"
+    },
+    "quickLinks": {
+      "title": "Quick Links",
+      "about": "About",
+      "impact": "Glass bottle benefits",
+      "process": "Production process",
+      "contact": "Contact"
+    },
+    "contactInfo": {
+      "title": "Contact Information"
+    },
+    "copyright": "© {{year}} AVARIS. All rights reserved.",
+    "tagline": "Designed with care for the environment 🌊"
+  },
+  "metadata": {
+    "title": "AVARIS - Premium & Sustainable Glass Bottled Water",
+    "description": "AVARIS provides premium glass bottled water services, perfectly combining superior quality and environmental responsibility. 100% commitment to reusable glass bottles, reducing ocean plastic waste.",
+    "keywords": [
+      "bottled water",
+      "glass bottles",
+      "premium mineral water",
+      "sustainable water",
+      "AVARIS",
+      "reusable glass bottles",
+      "eco-friendly water",
+      "water services",
+      "brand customization",
+      "safe drinking water",
+      "ISO 9001",
+      "HACCP"
+    ],
+    "ogTitle": "AVARIS - Premium & Sustainable Glass Bottled Water",
+    "ogDescription": "AVARIS provides premium glass bottled water services, perfectly combining superior quality and environmental responsibility.",
+    "ogImageAlt": "AVARIS - Premium Glass Bottled Water",
+    "twitterDescription": "100% commitment to reusable glass bottles, reducing ocean plastic waste."
+  }
+}

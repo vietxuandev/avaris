@@ -1,6 +1,9 @@
+"use client";
+
 import glassBottleWater from "@/assets/glass-bottle-water-droplets.jpg";
 import { Droplet, Heart, Leaf, Recycle, Shield, Sparkles } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import {
   AnimatedImpactCard,
   AnimatedBenefitCard,
@@ -8,77 +11,72 @@ import {
   AnimatedParallaxBackground,
 } from "./animated";
 
-const stats = [
-  {
-    number: "100%",
-    label: "Tái sử dụng",
-    description: "Chai thủy tinh vô hạn lần",
-    icon: Recycle,
-  },
-  {
-    number: "0%",
-    label: "BPA & độc hại",
-    description: "An toàn tuyệt đối",
-    icon: Shield,
-  },
-  {
-    number: "∞",
-    label: "Giữ nguyên vị",
-    description: "Chất lượng hoàn hảo",
-    icon: Sparkles,
-  },
-  {
-    number: "100%",
-    label: "Thân thiện",
-    description: "Bảo vệ môi trường",
-    icon: Leaf,
-  },
-];
-
-const benefits = [
-  {
-    icon: Recycle,
-    title: "Tái sử dụng bền vững",
-    description:
-      "Chai thủy tinh có thể thu hồi và tái sử dụng vô số lần, giảm thiểu rác thải nhựa và bảo vệ hệ sinh thái biển",
-  },
-  {
-    icon: Sparkles,
-    title: "Chất lượng cao cấp",
-    description:
-      "Thủy tinh không thấm, không chứa hóa chất, giữ nguyên độ tinh khiết và hương vị tự nhiên của nước",
-  },
-  {
-    icon: Shield,
-    title: "An toàn tuyệt đối",
-    description:
-      "Không chứa BPA, phthalates hay các chất độc hại từ nhựa, đảm bảo sức khỏe cho người tiêu dùng",
-  },
-  {
-    icon: Leaf,
-    title: "Bảo vệ đại dương",
-    description:
-      "Giảm lượng nhựa thải ra biển, góp phần bảo vệ hệ sinh thái và tạo ra tương lai xanh bền vững",
-  },
-  {
-    icon: Droplet,
-    title: "Giữ nhiệt tốt",
-    description:
-      "Thủy tinh duy trì nhiệt độ nước lâu hơn, mang lại trải nghiệm uống nước tốt nhất",
-  },
-  {
-    icon: Heart,
-    title: "Trách nhiệm xã hội",
-    description:
-      "Thể hiện cam kết của doanh nghiệp với môi trường và sức khỏe cộng đồng",
-  },
-];
-
 /**
- * ImpactSection - Server Component (SEO-optimized)
+ * ImpactSection - Client Component (using translations)
  * All animations are handled by client components
  */
 export function ImpactSection() {
+  const { t } = useTranslation();
+
+  const stats = [
+    {
+      number: t("impact.stats.reusable.number"),
+      label: t("impact.stats.reusable.label"),
+      description: t("impact.stats.reusable.description"),
+      icon: Recycle,
+    },
+    {
+      number: t("impact.stats.safe.number"),
+      label: t("impact.stats.safe.label"),
+      description: t("impact.stats.safe.description"),
+      icon: Shield,
+    },
+    {
+      number: t("impact.stats.quality.number"),
+      label: t("impact.stats.quality.label"),
+      description: t("impact.stats.quality.description"),
+      icon: Sparkles,
+    },
+    {
+      number: t("impact.stats.friendly.number"),
+      label: t("impact.stats.friendly.label"),
+      description: t("impact.stats.friendly.description"),
+      icon: Leaf,
+    },
+  ];
+
+  const benefits = [
+    {
+      icon: Recycle,
+      title: t("impact.benefits.sustainable.title"),
+      description: t("impact.benefits.sustainable.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("impact.benefits.premium.title"),
+      description: t("impact.benefits.premium.description"),
+    },
+    {
+      icon: Shield,
+      title: t("impact.benefits.safety.title"),
+      description: t("impact.benefits.safety.description"),
+    },
+    {
+      icon: Leaf,
+      title: t("impact.benefits.ocean.title"),
+      description: t("impact.benefits.ocean.description"),
+    },
+    {
+      icon: Droplet,
+      title: t("impact.benefits.temperature.title"),
+      description: t("impact.benefits.temperature.description"),
+    },
+    {
+      icon: Heart,
+      title: t("impact.benefits.responsibility.title"),
+      description: t("impact.benefits.responsibility.description"),
+    },
+  ];
   return (
     <section className="py-32 relative overflow-hidden bg-linear-to-br from-cyan-50 via-blue-50 to-cyan-100">
       {/* Background image with parallax - glass bottle */}
@@ -98,12 +96,12 @@ export function ImpactSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <AnimatedSectionHeader
-          badge="Glass Bottle Impact"
-          description="Chai thủy tinh tái sử dụng không chỉ là lựa chọn cao cấp mà còn là trách nhiệm với môi trường và sức khỏe cộng đồng"
+          badge={t("impact.badge")}
+          description={t("impact.description")}
         >
-          Tại sao chọn <br />
+          {t("impact.title")} <br />
           <span className="bg-linear-to-r from-cyan-600 via-blue-600 to-cyan-700 bg-clip-text text-transparent">
-            chai thủy tinh?
+            {t("impact.titleHighlight")}
           </span>
         </AnimatedSectionHeader>
 

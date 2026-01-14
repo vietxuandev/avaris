@@ -1,0 +1,237 @@
+{
+  "nav": {
+    "home": "Trang chủ",
+    "about": "Giới thiệu",
+    "impact": "Lợi ích",
+    "process": "Quy trình",
+    "contact": "Liên hệ"
+  },
+  "hero": {
+    "title": "AVARIS",
+    "subtitle": "Chai thủy tinh cao cấp, tái sử dụng - Kết hợp hoàn hảo giữa đẳng cấp và trách nhiệm với môi trường",
+    "cta": "Bắt đầu tương lai bền vững của bạn ngay"
+  },
+  "about": {
+    "badge": "Về AVARIS",
+    "title": "Giải pháp nước uống",
+    "titleHighlight": "cao cấp & bền vững",
+    "description": "AVARIS cung cấp dịch vụ nước uống đóng chai thủy tinh cao cấp, kết hợp hoàn hảo giữa chất lượng vượt trội và trách nhiệm với môi trường",
+    "features": {
+      "environment": {
+        "title": "Trách nhiệm môi trường",
+        "description": "Cam kết 100% chai thủy tinh tái sử dụng, giảm thiểu rác thải nhựa đại dương"
+      },
+      "quality": {
+        "title": "Chất lượng đẳng cấp",
+        "description": "Đạt chuẩn ISO 9001 & HACCP, đảm bảo nước uống tinh khiết tuyệt đối"
+      },
+      "health": {
+        "title": "An toàn sức khỏe",
+        "description": "0% BPA và hóa chất độc hại, an toàn tuyệt đối cho người tiêu dùng"
+      },
+      "ocean": {
+        "title": "Bảo vệ đại dương",
+        "description": "Góp phần giảm thiểu ô nhiễm nhựa, bảo vệ hệ sinh thái biển"
+      },
+      "custom": {
+        "title": "Tùy chỉnh thương hiệu",
+        "description": "Thiết kế chai theo yêu cầu, in logo và thông điệp thương hiệu của bạn"
+      },
+      "partner": {
+        "title": "Đối tác đáng tin cậy",
+        "description": "Đồng hành cùng doanh nghiệp xây dựng hình ảnh bền vững"
+      }
+    },
+    "stats": {
+      "experience": "Năm kinh nghiệm",
+      "partners": "Đối tác tin tưởng",
+      "quality": "Cam kết chất lượng",
+      "support": "Hỗ trợ tận tâm"
+    }
+  },
+  "impact": {
+    "badge": "Tác động tích cực",
+    "title": "Tại sao chọn",
+    "titleHighlight": "chai thủy tinh?",
+    "description": "Chai thủy tinh tái sử dụng không chỉ là lựa chọn cao cấp mà còn là trách nhiệm với môi trường và sức khỏe cộng đồng",
+    "stats": {
+      "reusable": {
+        "number": "100%",
+        "label": "Tái sử dụng",
+        "description": "Chai thủy tinh vô hạn lần"
+      },
+      "safe": {
+        "number": "0%",
+        "label": "BPA & độc hại",
+        "description": "An toàn tuyệt đối"
+      },
+      "quality": {
+        "number": "∞",
+        "label": "Giữ nguyên vị",
+        "description": "Chất lượng hoàn hảo"
+      },
+      "friendly": {
+        "number": "100%",
+        "label": "Thân thiện",
+        "description": "Bảo vệ môi trường"
+      }
+    },
+    "benefits": {
+      "sustainable": {
+        "title": "Tái sử dụng bền vững",
+        "description": "Chai thủy tinh có thể thu hồi và tái sử dụng vô số lần, giảm thiểu rác thải nhựa và bảo vệ hệ sinh thái biển"
+      },
+      "premium": {
+        "title": "Chất lượng cao cấp",
+        "description": "Thủy tinh không thấm, không chứa hóa chất, giữ nguyên độ tinh khiết và hương vị tự nhiên của nước"
+      },
+      "safety": {
+        "title": "An toàn tuyệt đối",
+        "description": "Không chứa BPA, phthalates hay các chất độc hại từ nhựa, đảm bảo sức khỏe cho người tiêu dùng"
+      },
+      "ocean": {
+        "title": "Bảo vệ đại dương",
+        "description": "Giảm lượng nhựa thải ra biển, góp phần bảo vệ hệ sinh thái và tạo ra tương lai xanh bền vững"
+      },
+      "temperature": {
+        "title": "Giữ nhiệt tốt",
+        "description": "Thủy tinh duy trì nhiệt độ nước lâu hơn, mang lại trải nghiệm uống nước tốt nhất"
+      },
+      "responsibility": {
+        "title": "Trách nhiệm xã hội",
+        "description": "Thể hiện cam kết của doanh nghiệp với môi trường và sức khỏe cộng đồng"
+      }
+    }
+  },
+  "process": {
+    "badge": "Quy trình",
+    "title": "Quy trình sản xuất",
+    "titleHighlight": "& vận hành bền vững",
+    "description": "Từ nguồn nước đến tay khách hàng - Chu trình bền vững",
+    "steps": {
+      "source": {
+        "title": "Nguồn nước",
+        "description": "Lựa chọn nguồn nước sạch, đạt tiêu chuẩn"
+      },
+      "filter": {
+        "title": "Lọc & Xử lý",
+        "description": "Quy trình lọc hiện đại, ISO 9001 & HACCP"
+      },
+      "bottle": {
+        "title": "Đóng chai",
+        "description": "Đóng chai tự động trong môi trường vô trùng"
+      },
+      "check": {
+        "title": "Kiểm tra",
+        "description": "Kiểm soát chất lượng nghiêm ngặt"
+      },
+      "delivery": {
+        "title": "Vận chuyển",
+        "description": "Giao hàng đến tận nơi, đúng hẹn"
+      },
+      "recycle": {
+        "title": "Thu hồi",
+        "description": "Thu hồi chai rỗng để tái sử dụng"
+      }
+    },
+    "certifications": {
+      "title": "Chứng nhận chất lượng quốc tế",
+      "description": "Được công nhận bởi các tổ chức chứng nhận hàng đầu thế giới",
+      "iso": {
+        "name": "ISO 9001",
+        "description": "Quản lý chất lượng"
+      },
+      "haccp": {
+        "name": "HACCP",
+        "description": "An toàn thực phẩm"
+      }
+    }
+  },
+  "product": {
+    "badge": "Sản phẩm thực tế",
+    "title": "Khám phá",
+    "titleHighlight": "AVARIS",
+    "description": "Trải nghiệm sản phẩm chai thủy tinh cao cấp của chúng tôi trong không gian sống thực tế",
+    "items": {
+      "premium": {
+        "title": "Chai thủy tinh cao cấp",
+        "description": "Thiết kế sang trọng, bền vững với môi trường"
+      },
+      "space": {
+        "title": "Không gian hiện đại",
+        "description": "Sự kết hợp hoàn hảo giữa thiết kế và công năng"
+      },
+      "lifestyle": {
+        "title": "Phong cách sống bền vững",
+        "description": "Lựa chọn hoàn hảo cho môi trường xanh"
+      },
+      "detail": {
+        "title": "Đẳng cấp trong từng chi tiết",
+        "description": "Trải nghiệm sản phẩm thực tế chất lượng"
+      }
+    }
+  },
+  "contact": {
+    "badge": "Liên hệ với chúng tôi",
+    "title": "Liên hệ",
+    "titleHighlight": "với chúng tôi",
+    "description": "Hãy để AVARIS đồng hành cùng thương hiệu của bạn",
+    "info": {
+      "website": {
+        "label": "Website",
+        "value": "avariswater.com"
+      },
+      "email": {
+        "label": "Email",
+        "value": "info@avariswater.com"
+      },
+      "phone": {
+        "label": "Hotline",
+        "value": "0868.869.910"
+      },
+      "linkedin": {
+        "label": "LinkedIn",
+        "value": "avariswater"
+      }
+    }
+  },
+  "footer": {
+    "brand": {
+      "description": "Nước uống cao cấp trong chai thủy tinh tái sử dụng - Định hình đẳng cấp thương hiệu của bạn"
+    },
+    "quickLinks": {
+      "title": "Liên kết nhanh",
+      "about": "Giới thiệu",
+      "impact": "Lợi ích chai thủy tinh",
+      "process": "Quy trình sản xuất",
+      "contact": "Liên hệ"
+    },
+    "contactInfo": {
+      "title": "Thông tin liên hệ"
+    },
+    "copyright": "© {{year}} AVARIS. Bản quyền đã được bảo lưu.",
+    "tagline": "Thiết kế với tình yêu dành cho môi trường 🌊"
+  },
+  "metadata": {
+    "title": "AVARIS - Nước Uống Đóng Chai Thủy Tinh Cao Cấp & Bền Vững",
+    "description": "AVARIS cung cấp dịch vụ nước uống đóng chai thủy tinh cao cấp, kết hợp hoàn hảo giữa chất lượng vượt trội và trách nhiệm với môi trường. Cam kết 100% chai thủy tinh tái sử dụng, giảm thiểu rác thải nhựa đại dương.",
+    "keywords": [
+      "nước uống đóng chai",
+      "chai thủy tinh",
+      "nước khoáng cao cấp",
+      "nước uống bền vững",
+      "AVARIS",
+      "chai thủy tinh tái sử dụng",
+      "nước uống thân thiện môi trường",
+      "dịch vụ nước uống",
+      "tùy chỉnh thương hiệu",
+      "nước uống an toàn",
+      "ISO 9001",
+      "HACCP"
+    ],
+    "ogTitle": "AVARIS - Nước Uống Đóng Chai Thủy Tinh Cao Cấp & Bền Vững",
+    "ogDescription": "AVARIS cung cấp dịch vụ nước uống đóng chai thủy tinh cao cấp, kết hợp hoàn hảo giữa chất lượng vượt trội và trách nhiệm với môi trường.",
+    "ogImageAlt": "AVARIS - Nước Uống Đóng Chai Thủy Tinh Cao Cấp",
+    "twitterDescription": "Cam kết 100% chai thủy tinh tái sử dụng, giảm thiểu rác thải nhựa đại dương."
+  }
+}

@@ -1,6 +1,9 @@
+"use client";
+
 import oceanWavesUnderwater from "@/assets/ocean-water-waves-underwater.jpg";
 import { Award, Droplets, Leaf, Shield, Sparkles, Users } from "lucide-react";
 import Image from "next/image";
+import { useTranslation } from "react-i18next";
 import {
   AnimatedBackground,
   AnimatedFeatureCard,
@@ -9,55 +12,52 @@ import {
   AnimatedStat,
 } from "./animated";
 
-const features = [
-  {
-    icon: Droplets,
-    title: "Trách nhiệm môi trường",
-    description:
-      "Cam kết 100% chai thủy tinh tái sử dụng, giảm thiểu rác thải nhựa đại dương",
-  },
-  {
-    icon: Award,
-    title: "Chất lượng đẳng cấp",
-    description:
-      "Đạt chuẩn ISO 9001 & HACCP, đảm bảo nước uống tinh khiết tuyệt đối",
-  },
-  {
-    icon: Shield,
-    title: "An toàn sức khỏe",
-    description:
-      "0% BPA và hóa chất độc hại, an toàn tuyệt đối cho người tiêu dùng",
-  },
-  {
-    icon: Leaf,
-    title: "Bảo vệ đại dương",
-    description: "Góp phần giảm thiểu ô nhiễm nhựa, bảo vệ hệ sinh thái biển",
-  },
-  {
-    icon: Sparkles,
-    title: "Tùy chỉnh thương hiệu",
-    description:
-      "Thiết kế chai theo yêu cầu, in logo và thông điệp thương hiệu của bạn",
-  },
-  {
-    icon: Users,
-    title: "Đối tác đáng tin cậy",
-    description: "Đồng hành cùng doanh nghiệp xây dựng hình ảnh bền vững",
-  },
-];
-
-const STATS = [
-  { end: 7, label: "Năm kinh nghiệm", suffix: "+" },
-  { end: 500, label: "Đối tác tin tưởng", suffix: "+" },
-  { end: 100, label: "Cam kết chất lượng", suffix: "%" },
-  { end: 24, label: "Hỗ trợ tận tâm", suffix: "/7" },
-];
-
 /**
- * AboutSection - Server Component (SEO-friendly)
+ * AboutSection - Client Component (now using translations)
  * All animations are handled by client components
  */
 export function AboutSection() {
+  const { t } = useTranslation();
+
+  const features = [
+    {
+      icon: Droplets,
+      title: t("about.features.environment.title"),
+      description: t("about.features.environment.description"),
+    },
+    {
+      icon: Award,
+      title: t("about.features.quality.title"),
+      description: t("about.features.quality.description"),
+    },
+    {
+      icon: Shield,
+      title: t("about.features.health.title"),
+      description: t("about.features.health.description"),
+    },
+    {
+      icon: Leaf,
+      title: t("about.features.ocean.title"),
+      description: t("about.features.ocean.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("about.features.custom.title"),
+      description: t("about.features.custom.description"),
+    },
+    {
+      icon: Users,
+      title: t("about.features.partner.title"),
+      description: t("about.features.partner.description"),
+    },
+  ];
+
+  const STATS = [
+    { end: 7, label: t("about.stats.experience"), suffix: "+" },
+    { end: 500, label: t("about.stats.partners"), suffix: "+" },
+    { end: 100, label: t("about.stats.quality"), suffix: "%" },
+    { end: 24, label: t("about.stats.support"), suffix: "/7" },
+  ];
   return (
     <section className="py-32 relative overflow-hidden bg-linear-to-br from-cyan-950 via-blue-950 to-blue-900">
       {/* Underwater background image with parallax */}
@@ -81,20 +81,19 @@ export function AboutSection() {
           <div className="inline-flex items-center gap-3 glass-button px-8 py-4 rounded-full mb-10 text-cyan-100">
             <Droplets className="w-5 h-5" />
             <span className="text-sm tracking-[0.3em] uppercase">
-              About AVARIS
+              {t("about.badge")}
             </span>
           </div>
 
           <h2 className="text-5xl md:text-6xl lg:text-7xl mb-8 text-white">
-            Giải pháp nước uống <br />
+            {t("about.title")} <br />
             <span className="bg-linear-to-r from-cyan-400 via-blue-400 to-cyan-300 bg-clip-text text-transparent">
-              cao cấp & bền vững
+              {t("about.titleHighlight")}
             </span>
           </h2>
 
           <p className="text-xl text-cyan-100/90 max-w-3xl mx-auto leading-relaxed">
-            AVARIS cung cấp dịch vụ nước uống đóng chai thủy tinh cao cấp, kết
-            hợp hoàn hảo giữa chất lượng vượt trội và trách nhiệm với môi trường
+            {t("about.description")}
           </p>
         </AnimatedSection>
 
