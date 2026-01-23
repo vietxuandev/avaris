@@ -1,7 +1,7 @@
 "use client";
 
 import oceanWavesUnderwater from "@/assets/ocean-water-waves-underwater.jpg";
-import { Award, Droplets, Leaf, Shield, Sparkles, Users } from "lucide-react";
+import { Award, Droplets, Leaf, Sparkles, Users } from "lucide-react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import {
@@ -9,7 +9,6 @@ import {
   AnimatedFeatureCard,
   AnimatedIcon,
   AnimatedSection,
-  AnimatedStat,
 } from "./animated";
 
 /**
@@ -21,29 +20,19 @@ export function AboutSection() {
 
   const features = [
     {
-      icon: Droplets,
-      title: t("about.features.environment.title"),
-      description: t("about.features.environment.description"),
+      icon: Leaf,
+      title: t("about.features.sustainable.title"),
+      description: t("about.features.sustainable.description"),
+    },
+    {
+      icon: Sparkles,
+      title: t("about.features.brand.title"),
+      description: t("about.features.brand.description"),
     },
     {
       icon: Award,
       title: t("about.features.quality.title"),
       description: t("about.features.quality.description"),
-    },
-    {
-      icon: Shield,
-      title: t("about.features.health.title"),
-      description: t("about.features.health.description"),
-    },
-    {
-      icon: Leaf,
-      title: t("about.features.ocean.title"),
-      description: t("about.features.ocean.description"),
-    },
-    {
-      icon: Sparkles,
-      title: t("about.features.custom.title"),
-      description: t("about.features.custom.description"),
     },
     {
       icon: Users,
@@ -52,12 +41,6 @@ export function AboutSection() {
     },
   ];
 
-  const STATS = [
-    { end: 7, label: t("about.stats.experience"), suffix: "+" },
-    { end: 500, label: t("about.stats.partners"), suffix: "+" },
-    { end: 100, label: t("about.stats.quality"), suffix: "%" },
-    { end: 24, label: t("about.stats.support"), suffix: "/7" },
-  ];
   return (
     <section className="py-32 relative overflow-hidden bg-linear-to-br from-cyan-950 via-blue-950 to-blue-900">
       {/* Underwater background image with parallax */}
@@ -98,7 +81,7 @@ export function AboutSection() {
         </AnimatedSection>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6">
           {features.map((feature, index) => (
             <AnimatedFeatureCard key={index} index={index}>
               {/* Icon */}
@@ -114,33 +97,6 @@ export function AboutSection() {
             </AnimatedFeatureCard>
           ))}
         </div>
-
-        {/* Stats CTA */}
-        <AnimatedSection className="mt-24" delay={0.8}>
-          <div className="relative max-w-5xl mx-auto">
-            {/* Outer glow */}
-            <div className="absolute -inset-4 bg-linear-to-r from-cyan-400/20 via-blue-500/20 to-cyan-400/20 rounded-[3rem] blur-3xl" />
-
-            {/* Glass card */}
-            <div className="relative glass-dark rounded-[3rem] p-6 md:p-16 overflow-hidden border border-white/10">
-              {/* Top reflection */}
-              <div className="absolute top-0 left-0 right-0 h-1/2 bg-linear-to-b from-white/10 to-transparent rounded-t-[3rem] pointer-events-none" />
-
-              {/* Stats grid */}
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 relative z-10">
-                {STATS.map((stat, i) => (
-                  <AnimatedStat
-                    key={i}
-                    end={stat.end}
-                    suffix={stat.suffix}
-                    label={stat.label}
-                    index={i}
-                  />
-                ))}
-              </div>
-            </div>
-          </div>
-        </AnimatedSection>
       </div>
     </section>
   );

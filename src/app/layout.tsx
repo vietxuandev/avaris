@@ -1,16 +1,17 @@
+import { Footer } from "@/components/Footer";
+import { I18nProvider } from "@/components/I18nProvider";
+import { Navbar } from "@/components/Navbar";
+import { getMetadata } from "@/lib/metadata";
+import {
+  localBusinessSchema,
+  organizationSchema,
+  websiteSchema,
+} from "@/lib/structured-data";
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { cookies } from "next/headers";
+import { wishShore } from "./fonts";
 import "./globals.css";
-import { Navbar } from "@/components/Navbar";
-import { Footer } from "@/components/Footer";
-import { I18nProvider } from "@/components/I18nProvider";
-import {
-  organizationSchema,
-  websiteSchema,
-  localBusinessSchema,
-} from "@/lib/structured-data";
-import { getMetadata } from "@/lib/metadata";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -68,7 +69,7 @@ export default function RootLayout({
         />
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} ${wishShore.variable} antialiased`}
       >
         <I18nProvider>
           <div className="min-h-screen">

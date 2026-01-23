@@ -17,89 +17,40 @@
     "titleHighlight": "cao cấp & bền vững",
     "description": "AVARIS cung cấp dịch vụ nước uống đóng chai thủy tinh cao cấp, kết hợp hoàn hảo giữa chất lượng vượt trội và trách nhiệm với môi trường",
     "features": {
-      "environment": {
-        "title": "Trách nhiệm môi trường",
-        "description": "Cam kết 100% chai thủy tinh tái sử dụng, giảm thiểu rác thải nhựa đại dương"
+      "sustainable": {
+        "title": "Đồng hành bền vững",
+        "description": "Đồng hành cùng doanh nghiệp xây dựng hình ảnh bền vững và chuyên nghiệp"
+      },
+      "brand": {
+        "title": "Tôn vinh thương hiệu",
+        "description": "Kiểu dáng chai sang trọng, thiết kế theo yêu cầu, truyền tải thông điệp và dấu ấn riêng"
       },
       "quality": {
         "title": "Chất lượng đẳng cấp",
-        "description": "Đạt chuẩn ISO 9001 & HACCP, đảm bảo nước uống tinh khiết tuyệt đối"
-      },
-      "health": {
-        "title": "An toàn sức khỏe",
-        "description": "0% BPA và hóa chất độc hại, an toàn tuyệt đối cho người tiêu dùng"
-      },
-      "ocean": {
-        "title": "Bảo vệ đại dương",
-        "description": "Góp phần giảm thiểu ô nhiễm nhựa, bảo vệ hệ sinh thái biển"
-      },
-      "custom": {
-        "title": "Tùy chỉnh thương hiệu",
-        "description": "Thiết kế chai theo yêu cầu, in logo và thông điệp thương hiệu của bạn"
+        "description": "Nước uống đạt tiêu chuẩn chất lượng quốc tế, đạt chứng nhận ISO 9001 và HACCP"
       },
       "partner": {
-        "title": "Đối tác đáng tin cậy",
-        "description": "Đồng hành cùng doanh nghiệp xây dựng hình ảnh bền vững"
+        "title": "Đối tác tin cậy",
+        "description": "Giải pháp toàn diện với chương trình quản lý vỏ chai, chính sách chiết khấu hấp dẫn và đội ngũ chăm sóc khách hàng 24/7"
       }
-    },
-    "stats": {
-      "experience": "Năm kinh nghiệm",
-      "partners": "Đối tác tin tưởng",
-      "quality": "Cam kết chất lượng",
-      "support": "Hỗ trợ tận tâm"
     }
   },
   "impact": {
     "badge": "Tác động tích cực",
     "title": "Tại sao chọn",
     "titleHighlight": "chai thủy tinh?",
-    "description": "Chai thủy tinh tái sử dụng không chỉ là lựa chọn cao cấp mà còn là trách nhiệm với môi trường và sức khỏe cộng đồng",
-    "stats": {
-      "reusable": {
-        "number": "100%",
-        "label": "Tái sử dụng",
-        "description": "Chai thủy tinh vô hạn lần"
-      },
-      "safe": {
-        "number": "0%",
-        "label": "BPA & độc hại",
-        "description": "An toàn tuyệt đối"
-      },
-      "quality": {
-        "number": "∞",
-        "label": "Giữ nguyên vị",
-        "description": "Chất lượng hoàn hảo"
-      },
-      "friendly": {
-        "number": "100%",
-        "label": "Thân thiện",
-        "description": "Bảo vệ môi trường"
-      }
-    },
     "benefits": {
-      "sustainable": {
-        "title": "Tái sử dụng bền vững",
-        "description": "Chai thủy tinh có thể thu hồi và tái sử dụng vô số lần, giảm thiểu rác thải nhựa và bảo vệ hệ sinh thái biển"
-      },
-      "premium": {
-        "title": "Chất lượng cao cấp",
-        "description": "Thủy tinh không thấm, không chứa hóa chất, giữ nguyên độ tinh khiết và hương vị tự nhiên của nước"
-      },
       "safety": {
         "title": "An toàn tuyệt đối",
-        "description": "Không chứa BPA, phthalates hay các chất độc hại từ nhựa, đảm bảo sức khỏe cho người tiêu dùng"
-      },
-      "ocean": {
-        "title": "Bảo vệ đại dương",
-        "description": "Giảm lượng nhựa thải ra biển, góp phần bảo vệ hệ sinh thái và tạo ra tương lai xanh bền vững"
-      },
-      "temperature": {
-        "title": "Giữ nhiệt tốt",
-        "description": "Thủy tinh duy trì nhiệt độ nước lâu hơn, mang lại trải nghiệm uống nước tốt nhất"
+        "description": "Không chứa BPA, phthalates hay bất kỳ chất độc hại từ nhựa, đảm bảo an toàn và sức khỏe cho người tiêu dùng"
       },
       "responsibility": {
-        "title": "Trách nhiệm xã hội",
-        "description": "Thể hiện cam kết của doanh nghiệp với môi trường và sức khỏe cộng đồng"
+        "title": "Trách nhiệm môi trường & Xã hội",
+        "description": "Thể hiện cam kết của doanh nghiệp với khách hàng trong việc giảm thiểu tác động đến môi trường và cộng đồng"
+      },
+      "premium": {
+        "title": "Trải nghiệm cao cấp",
+        "description": "Chai thủy tinh sang trọng giúp giữ nguyên độ tinh khiết và hương vị tự nhiên của nước"
       }
     }
   },
@@ -107,36 +58,38 @@
     "badge": "Quy trình",
     "title": "Quy trình sản xuất",
     "titleHighlight": "& vận hành bền vững",
-    "description": "Từ nguồn nước đến tay khách hàng - Chu trình bền vững",
+    "description": "Hành trình bền vững của chai thủy tinh AVARIS",
+    "journey": "Hành trình",
+    "sustainable": "bền vững",
     "steps": {
-      "source": {
-        "title": "Nguồn nước",
-        "description": "Lựa chọn nguồn nước sạch, đạt tiêu chuẩn"
+      "cleaning": {
+        "title": "Vệ sinh chai",
+        "description": "Quy trình 4 bước với khử trùng UV"
       },
-      "filter": {
-        "title": "Lọc & Xử lý",
-        "description": "Quy trình lọc hiện đại, ISO 9001 & HACCP"
+      "filtration": {
+        "title": "Hệ thống lọc RO",
+        "description": "Công nghệ lọc RO chất lượng Mỹ"
       },
-      "bottle": {
-        "title": "Đóng chai",
-        "description": "Đóng chai tự động trong môi trường vô trùng"
+      "filling": {
+        "title": "Rót & Đóng nắp",
+        "description": "Tự động hóa trong môi trường vô trùng"
       },
-      "check": {
-        "title": "Kiểm tra",
-        "description": "Kiểm soát chất lượng nghiêm ngặt"
+      "packaging": {
+        "title": "Đóng gói & Giao hàng",
+        "description": "Giao hàng đến khách sạn đúng hẹn"
       },
-      "delivery": {
-        "title": "Vận chuyển",
-        "description": "Giao hàng đến tận nơi, đúng hẹn"
+      "consumption": {
+        "title": "Khách hàng sử dụng",
+        "description": "Trải nghiệm nước uống cao cấp"
       },
-      "recycle": {
-        "title": "Thu hồi",
-        "description": "Thu hồi chai rỗng để tái sử dụng"
+      "collection": {
+        "title": "Thu hồi chai rỗng",
+        "description": "Thu hồi chai để tái sử dụng bền vững"
       }
     },
     "certifications": {
       "title": "Chứng nhận chất lượng quốc tế",
-      "description": "Được công nhận bởi các tổ chức chứng nhận hàng đầu thế giới",
+      "description": "Nguồn nước đầu vào đạt chuẩn QCVN 6-1:2010/BYT. Toàn bộ quy trình tuân thủ nghiêm ngặt tiêu chuẩn HACCP và ISO 9001 (IAF certified)",
       "iso": {
         "name": "ISO 9001",
         "description": "Quản lý chất lượng"

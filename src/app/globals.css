@@ -31,9 +31,11 @@
   --color-stone: #f8fafc;
 
   /* Typography */
+  --font-wish-shore: "wishShore", "wishShore Fallback";
   --font-family-heading: "Cormorant", serif;
-  --font-family-body: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
-    sans-serif;
+  --font-family-body:
+    -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-wish: var(--font-wish-shore);
 }
 
 /* Glass morphism utilities */
@@ -41,7 +43,8 @@
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  box-shadow: 0 8px 32px rgba(14, 116, 144, 0.12),
+  box-shadow:
+    0 8px 32px rgba(14, 116, 144, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.9),
     inset 0 -1px 0 rgba(255, 255, 255, 0.3);
 }
@@ -51,7 +54,8 @@
   backdrop-filter: blur(30px) saturate(180%);
   -webkit-backdrop-filter: blur(30px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3),
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
     inset 0 1px 0 rgba(255, 255, 255, 0.1);
 }
 
@@ -66,8 +70,10 @@
   border: 1.5px solid rgba(255, 255, 255, 0.6);
   border-top: 1.5px solid rgba(255, 255, 255, 0.9);
   border-left: 1.5px solid rgba(255, 255, 255, 0.9);
-  box-shadow: 0 8px 32px rgba(14, 116, 144, 0.15),
-    0 1px 2px rgba(14, 116, 144, 0.1), inset 0 1px 0 rgba(255, 255, 255, 1),
+  box-shadow:
+    0 8px 32px rgba(14, 116, 144, 0.15),
+    0 1px 2px rgba(14, 116, 144, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 1),
     inset 0 -1px 0 rgba(255, 255, 255, 0.4);
 }
 
@@ -81,16 +87,14 @@
   -webkit-backdrop-filter: blur(20px) saturate(180%);
   border: 1px solid rgba(255, 255, 255, 0.4);
   border-top: 1px solid rgba(255, 255, 255, 0.7);
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1),
+  box-shadow:
+    0 4px 24px rgba(0, 0, 0, 0.1),
     inset 0 1px 0 rgba(255, 255, 255, 0.8);
 }
 
 .mesh-gradient {
-  background: radial-gradient(
-      at 0% 0%,
-      rgba(6, 182, 212, 0.3) 0px,
-      transparent 50%
-    ),
+  background:
+    radial-gradient(at 0% 0%, rgba(6, 182, 212, 0.3) 0px, transparent 50%),
     radial-gradient(at 100% 0%, rgba(14, 165, 233, 0.3) 0px, transparent 50%),
     radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.3) 0px, transparent 50%),
     radial-gradient(at 0% 100%, rgba(34, 211, 238, 0.3) 0px, transparent 50%),
@@ -106,7 +110,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
+  background-image:
+    repeating-linear-gradient(
       90deg,
       transparent 0,
       rgba(255, 255, 255, 0.03) 1px,
@@ -133,7 +138,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background-image: repeating-linear-gradient(
+  background-image:
+    repeating-linear-gradient(
       90deg,
       transparent 0,
       rgba(12, 74, 110, 0.02) 1px,

@@ -143,7 +143,7 @@ export function AnimatedBenefitCard({
 interface AnimatedSectionHeaderProps {
   badge: string;
   children: ReactNode;
-  description: string;
+  description?: string;
 }
 
 /**
@@ -172,14 +172,16 @@ export function AnimatedSectionHeader({
 
       <h2 className="text-5xl md:text-6xl lg:text-7xl mb-8">{children}</h2>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        animate={isInView ? { opacity: 1 } : {}}
-        transition={{ duration: 0.8, delay: 0.4 }}
-        className="text-xl text-cyan-800 max-w-3xl mx-auto leading-relaxed"
-      >
-        {description}
-      </motion.p>
+      {description && (
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={isInView ? { opacity: 1 } : {}}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-xl text-cyan-800 max-w-3xl mx-auto leading-relaxed"
+        >
+          {description}
+        </motion.p>
+      )}
     </motion.div>
   );
 }

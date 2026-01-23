@@ -1,13 +1,16 @@
 "use client";
 
 import { motion, useInView } from "motion/react";
-import { useRef, type ReactNode } from "react";
+import Image, { type StaticImageData } from "next/image";
+import { useRef } from "react";
 
 interface AnimatedProcessStepProps {
   index: number;
   title: string;
   description: string;
-  children: ReactNode; // Icon passed as children
+  image?: StaticImageData;
+  glowStart?: number;
+  cycleDuration?: number;
 }
 
 /**
@@ -18,7 +21,9 @@ export function AnimatedProcessStep({
   index,
   title,
   description,
-  children,
+  image,
+  glowStart = 0,
+  cycleDuration = 6,
 }: AnimatedProcessStepProps) {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.2 });
@@ -29,8 +34,18 @@ export function AnimatedProcessStep({
       initial={{ opacity: 0, y: 60 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.6, delay: 0.6 + index * 0.15 }}
-      className="flex flex-col items-center relative z-10"
+      className="flex flex-col items-center relative"
     >
+      {/* Title - Positioned absolutely above icon */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={isInView ? { opacity: 1 } : {}}
+        transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
+        className="absolute bottom-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 text-center w-48"
+      >
+        <h3 className="text-lg text-white font-semibold">{title}</h3>
+      </motion.div>
+
       {/* Icon Circle */}
       <motion.div
         initial={{ scale: 0 }}
@@ -41,35 +56,90 @@ export function AnimatedProcessStep({
           type: "spring",
         }}
         whileHover={{ scale: 1.1, rotate: 5 }}
-        className="relative mb-6"
+        className="relative"
       >
         {/* Glass outer ring */}
-        <div className="relative w-32 h-32 glass-dark rounded-full p-1 shadow-2xl border border-white/10">
-          {/* Inner gradient circle with icon */}
-          <div className="w-full h-full rounded-full bg-linear-to-br from-cyan-500 to-blue-600 flex items-center justify-center relative overflow-hidden">
-            {/* Top reflection */}
-            <div className="absolute top-0 left-0 right-0 h-1/2 bg-linear-to-b from-white/30 to-transparent rounded-t-full" />
-            <div
-              className="w-12 h-12 text-white relative z-10"
-              style={{ strokeWidth: 2 }}
-            >
-              {children}
+        <div className="relative">
+          {/* Glow effect layer */}
+          <motion.div
+            className="absolute inset-0 rounded-full"
+            style={{
+              filter: "blur(20px)",
+              backgroundColor: "rgba(34, 211, 238, 0.8)",
+            }}
+            animate={{
+              opacity: [0, 0, 1, 0, 0],
+              scale: [1, 1, 1.1, 1, 1],
+            }}
+            transition={{
+              duration: cycleDuration,
+              repeat: Infinity,
+              ease: "linear",
+              times: [
+                0,
+                Math.max(0.001, (glowStart - 0.05) / cycleDuration),
+                Math.max(0.002, glowStart / cycleDuration),
+                Math.min(0.997, (glowStart + 0.5) / cycleDuration),
+                1,
+              ],
+            }}
+          />
+          <motion.div
+            className="relative w-32 h-32 glass-dark rounded-full p-1 shadow-2xl border"
+            animate={{
+              borderColor: [
+                "rgba(148, 163, 184, 0.3)",
+                "rgba(148, 163, 184, 0.3)",
+                "rgba(34, 211, 238, 1)",
+                "rgba(148, 163, 184, 0.3)",
+                "rgba(148, 163, 184, 0.3)",
+              ],
+            }}
+            transition={{
+              duration: cycleDuration,
+              repeat: Infinity,
+              ease: "linear",
+              times: [
+                0,
+                Math.max(0.001, (glowStart - 0.05) / cycleDuration),
+                Math.max(0.002, glowStart / cycleDuration),
+                Math.min(0.997, (glowStart + 0.5) / cycleDuration),
+                1,
+              ],
+            }}
+          >
+            {/* Inner gradient circle with image */}
+            <div className="w-full h-full rounded-full bg-white flex items-center justify-center relative overflow-hidden">
+              {/* Top reflection */}
+              <div className="absolute top-0 left-0 right-0 h-1/2 bg-linear-to-b from-white/30 to-transparent rounded-t-full" />
+              {image && (
+                <div className="w-16 h-16 relative z-10">
+                  <Image
+                    src={image}
+                    alt={title}
+                    className="w-full h-full object-contain"
+                    width={64}
+                    height={64}
+                  />
+                </div>
+              )}
             </div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
 
-      {/* Text Content */}
+      {/* Description - Positioned absolutely below icon */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
-        className="text-center"
+        className="absolute top-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 text-center w-48"
       >
-        <h3 className="text-lg mb-2 text-white">{title}</h3>
-        <p className="text-sm leading-relaxed text-cyan-100/80">
-          {description}
-        </p>
+        <div className="glass-dark border border-cyan-400/30 rounded-lg px-4 py-2 shadow-lg">
+          <p className="text-sm leading-relaxed text-cyan-100/90">
+            {description}
+          </p>
+        </div>
       </motion.div>
     </motion.div>
   );

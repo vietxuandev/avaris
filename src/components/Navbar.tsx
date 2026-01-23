@@ -18,7 +18,6 @@ export function Navbar() {
     { name: t("nav.about"), href: "#about" },
     { name: t("nav.impact"), href: "#impact" },
     { name: t("nav.process"), href: "#process" },
-    { name: t("nav.contact"), href: "#contact" },
   ];
 
   useEffect(() => {
@@ -95,7 +94,7 @@ export function Navbar() {
             whileTap={{ scale: 0.95 }}
           >
             <span
-              className={`text-2xl relative z-10 transition-all duration-300 ${
+              className={`text-2xl relative z-10 transition-all duration-300 font-wish ${
                 isScrolled
                   ? "text-ocean-900 drop-shadow-[0_2px_8px_rgba(255,255,255,0.8)]"
                   : "text-white drop-shadow-[0_0_20px_rgba(255,255,255,0.6)]"

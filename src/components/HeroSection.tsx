@@ -53,7 +53,7 @@ export function HeroSection() {
                 transition={{ duration: 0.6, delay: 0.4 }}
                 className="mb-8 flex flex-col items-center"
               >
-                <h1 className="text-6xl md:text-7xl lg:text-8xl mb-6 text-white drop-shadow-2xl">
+                <h1 className="text-6xl md:text-7xl lg:text-8xl mb-6 text-white drop-shadow-2xl font-wish">
                   {t("hero.title")}
                 </h1>
                 <div className="h-1.5 w-32 bg-white/70 rounded-full backdrop-blur-sm shadow-lg" />

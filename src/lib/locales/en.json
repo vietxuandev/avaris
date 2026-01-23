@@ -17,89 +17,40 @@
     "titleHighlight": "solution & sustainable",
     "description": "AVARIS provides premium glass bottled water services, perfectly combining superior quality and environmental responsibility",
     "features": {
-      "environment": {
-        "title": "Environmental Responsibility",
-        "description": "Committed to 100% reusable glass bottles, reducing ocean plastic waste"
+      "sustainable": {
+        "title": "Sustainable Partnership",
+        "description": "Accompany businesses in building a sustainable and professional image"
+      },
+      "brand": {
+        "title": "Brand Elevation",
+        "description": "Elegant bottle design, customized to requirements, conveying unique messages and brand identity"
       },
       "quality": {
         "title": "Premium Quality",
-        "description": "ISO 9001 & HACCP certified, ensuring absolutely pure drinking water"
-      },
-      "health": {
-        "title": "Health Safety",
-        "description": "0% BPA and toxic chemicals, absolutely safe for consumers"
-      },
-      "ocean": {
-        "title": "Ocean Protection",
-        "description": "Contributing to reducing plastic pollution, protecting marine ecosystems"
-      },
-      "custom": {
-        "title": "Brand Customization",
-        "description": "Custom bottle design, print your brand's logo and message"
+        "description": "Water meeting international quality standards, ISO 9001 and HACCP certified"
       },
       "partner": {
         "title": "Trusted Partner",
-        "description": "Accompanying businesses in building a sustainable image"
+        "description": "Comprehensive solution with bottle management program, attractive discount policies and 24/7 customer care team"
       }
-    },
-    "stats": {
-      "experience": "Years of experience",
-      "partners": "Trusted partners",
-      "quality": "Quality commitment",
-      "support": "Dedicated support"
     }
   },
   "impact": {
     "badge": "Glass Bottle Impact",
     "title": "Why choose",
     "titleHighlight": "glass bottles?",
-    "description": "Reusable glass bottles are not only a premium choice but also a responsibility to the environment and community health",
-    "stats": {
-      "reusable": {
-        "number": "100%",
-        "label": "Reusable",
-        "description": "Infinitely reusable glass bottles"
-      },
-      "safe": {
-        "number": "0%",
-        "label": "BPA & toxins",
-        "description": "Absolutely safe"
-      },
-      "quality": {
-        "number": "∞",
-        "label": "Taste preserved",
-        "description": "Perfect quality"
-      },
-      "friendly": {
-        "number": "100%",
-        "label": "Eco-friendly",
-        "description": "Environmental protection"
-      }
-    },
     "benefits": {
-      "sustainable": {
-        "title": "Sustainable reuse",
-        "description": "Glass bottles can be collected and reused countless times, reducing plastic waste and protecting marine ecosystems"
-      },
-      "premium": {
-        "title": "Premium quality",
-        "description": "Glass is non-porous, chemical-free, preserving the purity and natural taste of water"
-      },
       "safety": {
-        "title": "Absolute safety",
-        "description": "Contains no BPA, phthalates or toxic substances from plastic, ensuring consumer health"
-      },
-      "ocean": {
-        "title": "Ocean protection",
-        "description": "Reduces plastic waste in the ocean, helping protect ecosystems and creating a green sustainable future"
-      },
-      "temperature": {
-        "title": "Good heat retention",
-        "description": "Glass maintains water temperature longer, providing the best drinking experience"
+        "title": "Absolute Safety",
+        "description": "Contains no BPA, phthalates or any toxic substances from plastic, ensuring safety and health for consumers"
       },
       "responsibility": {
-        "title": "Social responsibility",
-        "description": "Demonstrates the company's commitment to the environment and community health"
+        "title": "Environmental & Social Responsibility",
+        "description": "Demonstrates the company's commitment to customers in minimizing environmental and community impact"
+      },
+      "premium": {
+        "title": "Premium Experience",
+        "description": "Elegant glass bottles help preserve the purity and natural taste of water"
       }
     }
   },
@@ -107,36 +58,38 @@
     "badge": "Our Process",
     "title": "Production process",
     "titleHighlight": "& sustainable operation",
-    "description": "From water source to customers - Sustainable cycle",
+    "description": "The sustainable journey of AVARIS glass bottles",
+    "journey": "Journey",
+    "sustainable": "sustainable",
     "steps": {
-      "source": {
-        "title": "Water source",
-        "description": "Selecting clean water sources, meeting standards"
+      "cleaning": {
+        "title": "Bottle Cleaning",
+        "description": "Four-step process with UV sterilization"
       },
-      "filter": {
-        "title": "Filtering & Treatment",
-        "description": "Modern filtration process, ISO 9001 & HACCP"
+      "filtration": {
+        "title": "RO Filtration System",
+        "description": "U.S. quality RO filtration technology"
       },
-      "bottle": {
-        "title": "Bottling",
-        "description": "Automatic bottling in sterile environment"
+      "filling": {
+        "title": "Filling & Capping",
+        "description": "Automated in sterile environment"
       },
-      "check": {
-        "title": "Inspection",
-        "description": "Strict quality control"
+      "packaging": {
+        "title": "Packaging & Delivery",
+        "description": "On-time delivery to hotels"
       },
-      "delivery": {
-        "title": "Delivery",
-        "description": "Delivered to your location, on time"
+      "consumption": {
+        "title": "Customer Consumption",
+        "description": "Premium water experience"
       },
-      "recycle": {
-        "title": "Collection",
-        "description": "Collecting empty bottles for reuse"
+      "collection": {
+        "title": "Collect Empty Bottles",
+        "description": "Bottle collection for sustainable reuse"
       }
     },
     "certifications": {
-      "title": "International quality certification",
-      "description": "Recognized by the world's leading certification organizations",
+      "title": "International Quality Certification",
+      "description": "Incoming water source compliant with QCVN 6-1:2010/BYT. Whole processes strictly compliant with HACCP and ISO 9001 (IAF certified)",
       "iso": {
         "name": "ISO 9001",
         "description": "Quality management"
