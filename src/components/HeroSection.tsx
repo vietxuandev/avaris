@@ -28,7 +28,7 @@ export function HeroSection() {
             playsInline
             className="w-full h-full object-cover"
           >
-            <source src="/assets/tvc.mp4" type="video/mp4" />
+            <source src="/assets/tvc.webm" type="video/webm" />
           </video>
           {/* Overlay gradient for better text readability */}
           <div className="absolute inset-0 bg-linear-to-br from-cyan-900/30 via-blue-900/20 to-blue-900/40" />

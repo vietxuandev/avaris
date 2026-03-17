@@ -1,9 +1,16 @@
 "use client";
 
-import product1 from "@/assets/product-1.jpg";
-import product2 from "@/assets/product-2.jpg";
-import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.png";
+import product1 from "@/assets/DSC03935.jpg";
+import product2 from "@/assets/DSC03951.jpg";
+import product3 from "@/assets/DSC04051.jpg";
+import product4 from "@/assets/DSC04063.jpg";
+import product5 from "@/assets/DSC04082.jpg";
+import product6 from "@/assets/DSC04120.jpg";
+import product7 from "@/assets/DSC04160.jpg";
+import product8 from "@/assets/DSC04177.jpg";
+import product9 from "@/assets/DSC04247.jpg";
+import product10 from "@/assets/DSC04273.jpg";
+import product11 from "@/assets/DSC04276.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -16,35 +23,56 @@ import Image from "next/image";
 import { useTranslation } from "react-i18next";
 import { AnimatedSection } from "./animated/AnimatedSection";
 
+const products = [
+  {
+    id: 1,
+    image: product1,
+  },
+  {
+    id: 2,
+    image: product2,
+  },
+  {
+    id: 3,
+    image: product3,
+  },
+  {
+    id: 4,
+    image: product4,
+  },
+  {
+    id: 5,
+    image: product5,
+  },
+  {
+    id: 6,
+    image: product6,
+  },
+  {
+    id: 7,
+    image: product7,
+  },
+  {
+    id: 8,
+    image: product8,
+  },
+  {
+    id: 9,
+    image: product9,
+  },
+  {
+    id: 10,
+    image: product10,
+  },
+  {
+    id: 11,
+    image: product11,
+  },
+];
+
 export function ProductSection() {
   const { t } = useTranslation();
 
-  const products = [
-    {
-      id: 1,
-      image: product1,
-      title: t("product.items.premium.title"),
-      description: t("product.items.premium.description"),
-    },
-    {
-      id: 2,
-      image: product2,
-      title: t("product.items.space.title"),
-      description: t("product.items.space.description"),
-    },
-    {
-      id: 4,
-      image: product4,
-      title: t("product.items.lifestyle.title"),
-      description: t("product.items.lifestyle.description"),
-    },
-    {
-      id: 3,
-      image: product3,
-      title: t("product.items.detail.title"),
-      description: t("product.items.detail.description"),
-    },
-  ];
   return (
     <section
       id="products"
@@ -123,28 +151,11 @@ export function ProductSection() {
                         <div className="relative aspect-3/4 overflow-hidden">
                           <Image
                             src={product.image}
-                            alt={product.title}
+                            alt="AVARIS Water Bottle"
                             className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             priority={index === 0}
                           />
-                          {/* Overlay gradient */}
-                          <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                        </div>
-
-                        {/* Content */}
-                        <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 md:p-6 text-white">
-                          <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2 transform group-hover:translate-y-0 translate-y-2 transition-transform duration-500">
-                            {product.title}
-                          </h3>
-                          <p className="text-sm text-white/90 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                            {product.description}
-                          </p>
-                        </div>
-
-                        {/* Shine effect */}
-                        <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700">
-                          <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
                         </div>
                       </div>
                     </motion.div>
@@ -166,7 +177,7 @@ export function ProductSection() {
             transition={{ duration: 0.6 }}
             className="text-slate-600 text-lg"
           >
-            Sản phẩm cao cấp, thiết kế tinh tế, thân thiện với môi trường
+            {t("product.tagline")}
           </motion.p>
         </AnimatedSection>
       </div>
