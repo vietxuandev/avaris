@@ -37,14 +37,14 @@ export function AnimatedProcessStep({
       className="flex flex-col items-center relative"
     >
       {/* Title - Positioned absolutely above icon */}
-      <motion.div
+      {/* <motion.div
         initial={{ opacity: 0 }}
         animate={isInView ? { opacity: 1 } : {}}
         transition={{ duration: 0.6, delay: 1 + index * 0.15 }}
         className="absolute bottom-[calc(100%+0.5rem)] left-1/2 -translate-x-1/2 text-center w-48"
       >
         <h3 className="text-lg text-white font-semibold">{title}</h3>
-      </motion.div>
+      </motion.div> */}
 
       {/* Icon Circle */}
       <motion.div

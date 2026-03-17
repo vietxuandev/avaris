@@ -1,13 +1,8 @@
 "use client";
 
 import product1 from "@/assets/DSC03935.jpg";
-import product2 from "@/assets/DSC03951.jpg";
-import product3 from "@/assets/DSC04051.jpg";
 import product4 from "@/assets/DSC04063.jpg";
 import product5 from "@/assets/DSC04082.jpg";
-import product6 from "@/assets/DSC04120.jpg";
-import product7 from "@/assets/DSC04160.jpg";
-import product8 from "@/assets/DSC04177.jpg";
 import product9 from "@/assets/DSC04247.jpg";
 import product10 from "@/assets/DSC04273.jpg";
 import product11 from "@/assets/DSC04276.jpg";
@@ -29,32 +24,12 @@ const products = [
     image: product1,
   },
   {
-    id: 2,
-    image: product2,
-  },
-  {
-    id: 3,
-    image: product3,
-  },
-  {
     id: 4,
     image: product4,
   },
   {
     id: 5,
     image: product5,
-  },
-  {
-    id: 6,
-    image: product6,
-  },
-  {
-    id: 7,
-    image: product7,
-  },
-  {
-    id: 8,
-    image: product8,
   },
   {
     id: 9,

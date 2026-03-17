@@ -1,6 +1,6 @@
 "use client";
 
-import glassBottleWater from "@/assets/glass-bottle-water-droplets.jpg";
+import glassBottleWater from "@/assets/DSC04051.jpg";
 import { Heart, Shield, Sparkles } from "lucide-react";
 import Image from "next/image";
 import { useTranslation } from "react-i18next";
