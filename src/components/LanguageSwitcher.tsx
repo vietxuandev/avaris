@@ -35,7 +35,6 @@ export function LanguageSwitcher({ isScrolled }: LanguageSwitcherProps) {
 
   return (
     <div className="relative">
-      {/* Current Language Button */}
       <motion.button
         onClick={() => setIsOpen(!isOpen)}
         className={`flex items-center gap-2 px-3 py-2 rounded-xl transition-all duration-300 ${
@@ -54,16 +53,13 @@ export function LanguageSwitcher({ isScrolled }: LanguageSwitcherProps) {
         </span>
       </motion.button>
 
-      {/* Dropdown Menu */}
       {isOpen && (
         <>
-          {/* Backdrop */}
           <div
             className="fixed inset-0 z-40"
             onClick={() => setIsOpen(false)}
           />
 
-          {/* Dropdown */}
           <motion.div
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
