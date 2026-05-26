@@ -3,7 +3,7 @@
 import product1 from "@/assets/product-1.jpg";
 import product2 from "@/assets/product-2.jpg";
 import product3 from "@/assets/product-3.jpg";
-import product4 from "@/assets/product-4.png";
+import product4 from "@/assets/product-4.jpg";
 import {
   Carousel,
   CarouselContent,
@@ -23,26 +23,18 @@ export function ProductSection() {
     {
       id: 1,
       image: product1,
-      title: t("product.items.premium.title"),
-      description: t("product.items.premium.description"),
     },
     {
       id: 2,
       image: product2,
-      title: t("product.items.space.title"),
-      description: t("product.items.space.description"),
     },
     {
       id: 4,
       image: product4,
-      title: t("product.items.lifestyle.title"),
-      description: t("product.items.lifestyle.description"),
     },
     {
       id: 3,
       image: product3,
-      title: t("product.items.detail.title"),
-      description: t("product.items.detail.description"),
     },
   ];
   return (
@@ -123,23 +115,13 @@ export function ProductSection() {
                         <div className="relative aspect-3/4 overflow-hidden">
                           <Image
                             src={product.image}
-                            alt={product.title}
+                            alt="Product Image"
                             className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-700"
                             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                             priority={index === 0}
                           />
                           {/* Overlay gradient */}
                           <div className="absolute inset-0 bg-linear-to-t from-slate-900/80 via-slate-900/20 to-transparent opacity-60 group-hover:opacity-80 transition-opacity duration-500" />
-                        </div>
-
-                        {/* Content */}
-                        <div className="absolute bottom-0 left-0 right-0 p-2 sm:p-4 md:p-6 text-white">
-                          <h3 className="text-sm sm:text-base md:text-xl font-bold mb-1 sm:mb-2 transform group-hover:translate-y-0 translate-y-2 transition-transform duration-500">
-                            {product.title}
-                          </h3>
-                          <p className="text-sm text-white/90 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-500">
-                            {product.description}
-                          </p>
                         </div>
 
                         {/* Shine effect */}
